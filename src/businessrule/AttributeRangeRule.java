@@ -2,8 +2,8 @@ package businessrule;
 
 public class AttributeRangeRule extends BusinessRule {
 
-	public AttributeRangeRule(int ruleid, String authorid, String type, String operator, String compare,String rangeAttribute, String first, String last) {
-		super(ruleid, authorid, type, operator, compare, first, last);
+	public AttributeRangeRule(int ruleid, String authorid, String type, String operator, String rangeAttribute, String first, String last) {
+		super(ruleid, authorid, type, operator, first, last);
 		generateAttributeRangeRule(ruleid, authorid, type, operator, rangeAttribute, first, last);
 	}
 
@@ -12,11 +12,11 @@ public class AttributeRangeRule extends BusinessRule {
 		String tablename = tableAttribute[0];
 		String attribute = tableAttribute[1];
 		String constrainname = "constraint"+ruleid;
-		String constraintstatement = "("+attribute+" "+getOperator(operator)+" "+first+" and "+last+");";
+		String constraintstatement = attribute+" "+getOperator(operator)+" "+first+" and "+last;
 		System.out.println(toString(tablename, constrainname, constraintstatement));
 	}
 	public String toString(String tablename, String constrainname, String constraintstatement){
-		String string = "Alter table " + tablename +" add constraint " + constrainname + " check"+constraintstatement;
+		String string = "Alter table " + tablename +" add constraint " + constrainname + " check("+constraintstatement+");";
 		return string;
 	}
 	

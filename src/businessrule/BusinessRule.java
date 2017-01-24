@@ -6,17 +6,17 @@ public class BusinessRule implements BusinessRuleType {
 	public String type;
 	public String operator;
 	public String compare;
+	public String rangeAttribute;
 	public String first;
 	public String last;
 
 
-	public BusinessRule(int ruleid, String authorid, String type, String operator, String compare, String first, String last) {
+	public BusinessRule(int ruleid, String authorid, String type, String operator, String first, String last) {
 		super();
 		this.ruleid = ruleid;
 		this.authorid = authorid;
 		this.type = type;
 		this.operator = operator;
-		this.compare = compare;
 		this.first = first;
 		this.last = last;
 	}
@@ -76,6 +76,14 @@ public class BusinessRule implements BusinessRuleType {
 	public void setLast(String last) {
 		this.last = last;
 	}
+	
+	public String getRangeAttribute() {
+		return rangeAttribute;
+	}
+
+	public void setRangeAttribute(String rangeAttribute) {
+		this.rangeAttribute = rangeAttribute;
+	}
 
 	//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.
 	@Override
@@ -85,36 +93,35 @@ public class BusinessRule implements BusinessRuleType {
 		
 		//Attribute rules
 		if (type.equals("atr")) {
-			new AttributeRangeRule(ruleid, authorid, type, operator, compare, first, last);
+			new AttributeRangeRule(ruleid, authorid, type, operator, rangeAttribute, first, last);
 		}
 		if (type.equals("atc")) {
-
-			new AttributeCompareRule(ruleid, authorid, type, operator, compare, first, last);
+			new AttributeCompareRule(ruleid, authorid, type, operator, first, last);
 		}
 		if (type.equals("atl")) {
-			new AttributeListRule(ruleid, authorid, type, operator, compare, first, last);
+			new AttributeListRule(ruleid, authorid, type, operator, first, last);
 		}
 		if (type.equals("ato")) {
-			new AttributeOtherRule(ruleid, authorid, type, operator, compare, first, last);
+			new AttributeOtherRule(ruleid, authorid, type, operator, first, last);
 		}
 		
 		//Tuple Rules
 		if (type.equals("tuc")) {
-			new TupleCompareRule(ruleid, authorid, type, operator, compare, first, last);
+			new TupleCompareRule(ruleid, authorid, type, operator, first, last);
 		}
 		if (type.equals("tuo")) {
-			new TupleOtherRule(ruleid, authorid, type, operator, compare, first, last);
+			new TupleOtherRule(ruleid, authorid, type, operator, first, last);
 		}
 		
 		
 		if (type.equals("ent")) {
-			new EntityOtherRule(ruleid, authorid, type, operator, compare, first, last);
+			new EntityOtherRule(ruleid, authorid, type, operator, first, last);
 		}
 		if (type.equals("int")) {
-			new InterEntityCompareRule(ruleid, authorid, type, operator, compare, first, last);
+			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last);
 		}
 		if (type.equals("mod")) {
-			new ModifyRule(ruleid, authorid, type, operator, compare, first, last);
+			new ModifyRule(ruleid, authorid, type, operator, first, last);
 		}
 
 	}
