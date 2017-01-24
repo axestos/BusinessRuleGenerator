@@ -1,2 +1,4 @@
 /bin/
 /target/
+.idea/compiler.xml
+.idea/libraries/ojdbc7.xml
