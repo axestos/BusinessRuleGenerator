@@ -2,8 +2,8 @@ package businessrule;
 
 public class AttributeCompareRule extends BusinessRule {
 
-	public AttributeCompareRule(String type, String operator, String resultset) {
-		super(type, operator);
+	public AttributeCompareRule(int ruleid, String authorid, String type, String operator, String compare, String first, String last){
+		super(ruleid, authorid, type, operator, compare, first, last);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -79,42 +79,42 @@ public class BusinessRule implements BusinessRuleType {
 
 	//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.
 	@Override
-	public void generateBusinessRule(String resultset) {
+	public void generateBusinessRule() {
 		String type = getType();
 		String operator = getOperator();
 		
 		//Attribute rules
 		if (type.equals("atr")) {
-			new AttributeRangeRule(type, operator, resultset);
+			new AttributeRangeRule(ruleid, authorid, type, operator, compare, first, last);
 		}
 		if (type.equals("atc")) {
 
-			new AttributeCompareRule(type, operator, resultset);
+			new AttributeCompareRule(ruleid, authorid, type, operator, compare, first, last);
 		}
 		if (type.equals("atl")) {
-			new AttributeListRule(type, operator, resultset);
+			new AttributeListRule(ruleid, authorid, type, operator, compare, first, last);
 		}
 		if (type.equals("ato")) {
-			new AttributeOtherRule(type, operator, resultset);
+			new AttributeOtherRule(ruleid, authorid, type, operator, compare, first, last);
 		}
 		
 		//Tuple Rules
 		if (type.equals("tuc")) {
-			new TupleCompareRule(type, operator, resultset);
+			new TupleCompareRule(ruleid, authorid, type, operator, compare, first, last);
 		}
 		if (type.equals("tuo")) {
-			new TupleOtherRule(type, operator, resultset);
+			new TupleOtherRule(ruleid, authorid, type, operator, compare, first, last);
 		}
 		
 		
 		if (type.equals("ent")) {
-			new EntityOtherRule(type, operator, resultset);
+			new EntityOtherRule(ruleid, authorid, type, operator, compare, first, last);
 		}
 		if (type.equals("int")) {
-			new InterEntityCompareRule(type, operator, resultset);
+			new InterEntityCompareRule(ruleid, authorid, type, operator, compare, first, last);
 		}
 		if (type.equals("mod")) {
-			new ModifyRule(type, operator, resultset);
+			new ModifyRule(ruleid, authorid, type, operator, compare, first, last);
 		}
 
 	}

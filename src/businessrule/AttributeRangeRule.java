@@ -2,8 +2,8 @@ package businessrule;
 
 public class AttributeRangeRule extends BusinessRule {
 
-	public AttributeRangeRule(String attribute, String operator, String resultset) {
-		super(attribute, operator);
+	public AttributeRangeRule(int ruleid, String authorid, String type, String operator, String compare, String first, String last) {
+		super(ruleid, authorid, type, operator, compare, first, last);
 		// TODO Auto-generated constructor stub
 	}
 
