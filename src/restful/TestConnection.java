@@ -1,5 +1,10 @@
 package restful;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,14 +32,21 @@ public class TestConnection {
                         + conn.getResponseCode());
             }
 
+
             BufferedReader br = new BufferedReader(new InputStreamReader(
                     (conn.getInputStream())));
 
             String output;
-            System.out.println("Output from Server .... \n");
+            String jsonString = "";
+            System.out.println("Output from Server: \n");
             while ((output = br.readLine()) != null) {
-                System.out.println(output);
+                jsonString = jsonString + output;
             }
+
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            JsonParser jsonparser = new JsonParser();
+            JsonObject businessRule =  (JsonObject)jsonparser.parse(jsonString);
+            System.out.println(gson.toJson(businessRule));
 
             conn.disconnect();
 
