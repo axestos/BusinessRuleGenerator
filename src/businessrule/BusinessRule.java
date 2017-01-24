@@ -9,7 +9,7 @@ public class BusinessRule implements BusinessRuleType {
 	public String rangeAttribute;
 	public String first;
 	public String last;
-
+	public String range;
 
 	public BusinessRule(int ruleid, String authorid, String type, String operator, String first, String last) {
 		super();
@@ -85,6 +85,15 @@ public class BusinessRule implements BusinessRuleType {
 		this.rangeAttribute = rangeAttribute;
 	}
 
+
+	public String getRange() {
+		return range;
+	}
+
+	public void setRange(String range) {
+		this.range = range;
+	}
+
 	//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.
 	@Override
 	public void generateBusinessRule() {
@@ -102,7 +111,7 @@ public class BusinessRule implements BusinessRuleType {
 			new AttributeListRule(ruleid, authorid, type, operator, first, last);
 		}
 		if (type.equals("ato")) {
-			new AttributeOtherRule(ruleid, authorid, type, operator, first, last);
+			new AttributeOtherRule(ruleid, authorid, type, operator, rangeAttribute, first, last, range);
 		}
 		
 		//Tuple Rules
@@ -112,7 +121,6 @@ public class BusinessRule implements BusinessRuleType {
 		if (type.equals("tuo")) {
 			new TupleOtherRule(ruleid, authorid, type, operator, first, last);
 		}
-		
 		
 		if (type.equals("ent")) {
 			new EntityOtherRule(ruleid, authorid, type, operator, first, last);
