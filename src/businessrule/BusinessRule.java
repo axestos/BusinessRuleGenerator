@@ -1,7 +1,8 @@
 package businessrule;
 
 public class BusinessRule implements BusinessRuleType {
-	public int authorid;
+	public int ruleid;
+	public String authorid;
 	public String type;
 	public String operator;
 	public String compare;
@@ -9,8 +10,9 @@ public class BusinessRule implements BusinessRuleType {
 	public String last;
 
 
-	public BusinessRule(int authorid, String type, String operator, String compare, String first, String last) {
+	public BusinessRule(int ruleid, String authorid, String type, String operator, String compare, String first, String last) {
 		super();
+		this.ruleid = ruleid;
 		this.authorid = authorid;
 		this.type = type;
 		this.operator = operator;
@@ -35,11 +37,19 @@ public class BusinessRule implements BusinessRuleType {
 		this.operator = operator;
 	}
 
-	public int getAuthorid() {
+	public int getRuleid() {
+		return ruleid;
+	}
+
+	public void setRuleid(int ruleid) {
+		this.ruleid = ruleid;
+	}
+	
+	public String getAuthorid() {
 		return authorid;
 	}
 
-	public void setAuthorid(int authorid) {
+	public void setAuthorid(String authorid) {
 		this.authorid = authorid;
 	}
 
