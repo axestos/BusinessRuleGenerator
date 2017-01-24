@@ -21,6 +21,9 @@ public class AttributeCompareRule extends BusinessRule {
 	}
 	
 	public String getOperator(String operator){
+		if (operator.equals("NotEquals")){
+			operator= "<>";
+		}
 		if (operator.equals("Equals")){
 			operator= "=";
 		}
