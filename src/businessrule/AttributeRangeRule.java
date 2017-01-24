@@ -2,7 +2,7 @@ package businessrule;
 
 public class AttributeRangeRule extends BusinessRule {
 
-	public AttributeRangeRule(int ruleid, String authorid, String type, String operator, String compare, String first, String last) {
+	public AttributeRangeRule(int ruleid, String authorid, String type, String operator, String first, String last) {
 		super(ruleid, authorid, type, operator, compare, first, last);
 		// TODO Auto-generated constructor stub
 	}

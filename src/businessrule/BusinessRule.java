@@ -85,7 +85,7 @@ public class BusinessRule implements BusinessRuleType {
 		
 		//Attribute rules
 		if (type.equals("atr")) {
-			new AttributeRangeRule(ruleid, authorid, type, operator, compare, first, last);
+			new AttributeRangeRule(ruleid, authorid, type, operator, first, last);
 		}
 		if (type.equals("atc")) {
 
