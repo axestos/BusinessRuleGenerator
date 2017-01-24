@@ -1,13 +1,22 @@
 package businessrule;
 
 public class BusinessRule implements BusinessRuleType {
+	public int authorid;
 	public String type;
 	public String operator;
+	public String compare;
+	public String first;
+	public String last;
 
-	public BusinessRule(String type, String operator) {
+
+	public BusinessRule(int authorid, String type, String operator, String compare, String first, String last) {
 		super();
+		this.authorid = authorid;
 		this.type = type;
 		this.operator = operator;
+		this.compare = compare;
+		this.first = first;
+		this.last = last;
 	}
 
 	public String getType() {
@@ -25,8 +34,40 @@ public class BusinessRule implements BusinessRuleType {
 	public void setOperator(String operator) {
 		this.operator = operator;
 	}
-	
-//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.
+
+	public int getAuthorid() {
+		return authorid;
+	}
+
+	public void setAuthorid(int authorid) {
+		this.authorid = authorid;
+	}
+
+	public String getCompare() {
+		return compare;
+	}
+
+	public void setCompare(String compare) {
+		this.compare = compare;
+	}
+
+	public String getFirst() {
+		return first;
+	}
+
+	public void setFirst(String first) {
+		this.first = first;
+	}
+
+	public String getLast() {
+		return last;
+	}
+
+	public void setLast(String last) {
+		this.last = last;
+	}
+
+	//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.
 	@Override
 	public void generateBusinessRule(String resultset) {
 		String type = getType();
@@ -37,6 +78,7 @@ public class BusinessRule implements BusinessRuleType {
 			new AttributeRangeRule(type, operator, resultset);
 		}
 		if (type.equals("atc")) {
+
 			new AttributeCompareRule(type, operator, resultset);
 		}
 		if (type.equals("atl")) {
