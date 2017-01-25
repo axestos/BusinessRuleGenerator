@@ -5,6 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessrule/BusinessRule.java" afterPath="$PROJECT_DIR$/src/businessrule/BusinessRule.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessrule/BusinessRuleType.java" afterPath="$PROJECT_DIR$/src/businessrule/BusinessRuleType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/restful/getData.java" afterPath="$PROJECT_DIR$/src/restful/getData.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="BusinessRule.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-152">
-              <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+            <state relative-caret-position="137">
+              <caret line="109" column="88" selection-start-line="109" selection-start-column="88" selection-end-line="109" selection-end-column="88" />
               <folding>
                 <element signature="e#629#630#0" expanded="true" />
                 <element signature="e#652#653#0" expanded="true" />
@@ -193,8 +194,8 @@
         <option value="$PROJECT_DIR$/src/businessrule/ModifyRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java" />
         <option value="$PROJECT_DIR$/src/restful/getData.java" />
-        <option value="$PROJECT_DIR$/src/businessrule/BusinessRuleType.java" />
         <option value="$PROJECT_DIR$/src/businessrule/BusinessRule.java" />
+        <option value="$PROJECT_DIR$/src/businessrule/BusinessRuleType.java" />
       </list>
     </option>
   </component>
@@ -921,7 +922,7 @@
       <workItem from="1485271595788" duration="242000" />
       <workItem from="1485271887568" duration="43000" />
       <workItem from="1485271958689" duration="47000" />
-      <workItem from="1485341519839" duration="7493000" />
+      <workItem from="1485341519839" duration="7681000" />
     </task>
     <task id="LOCAL-00001" summary="businesrule setters toegevoegd in JSON">
       <created>1485355590416</created>
@@ -930,11 +931,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485355590416</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="GenerateBusinessRule geeft nu BusinessRule object mee.">
+      <created>1485356089340</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1485356089340</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15293000" />
+    <option name="totallyTimeSpent" value="15481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="121" width="1936" height="1056" extended-state="0" />
@@ -989,7 +997,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="businesrule setters toegevoegd in JSON" />
-    <option name="LAST_COMMIT_MESSAGE" value="businesrule setters toegevoegd in JSON" />
+    <MESSAGE value="GenerateBusinessRule geeft nu BusinessRule object mee." />
+    <option name="LAST_COMMIT_MESSAGE" value="GenerateBusinessRule geeft nu BusinessRule object mee." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1212,14 +1221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1244,6 +1245,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessrule/AttributeRangeRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/restful/getData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -1252,10 +1261,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/AttributeRangeRule.java">
+    <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1270,8 +1279,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-152">
-          <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+        <state relative-caret-position="137">
+          <caret line="109" column="88" selection-start-line="109" selection-start-column="88" selection-end-line="109" selection-end-column="88" />
           <folding>
             <element signature="e#629#630#0" expanded="true" />
             <element signature="e#652#653#0" expanded="true" />

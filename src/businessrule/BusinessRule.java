@@ -104,10 +104,7 @@ public class BusinessRule implements BusinessRuleType {
 
 	//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.
 	@Override
-	public void generateBusinessRule(BusinessRule b) {
-		String type = b.getType();
-		String operator = b.getOperator();
-		
+	public void generateBusinessRule() {
 		//Attribute rules
 		if (type.equals("atr")) {
 			new AttributeRangeRule(ruleid, authorid, type, operator, rangeAttribute, first, last);
