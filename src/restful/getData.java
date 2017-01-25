@@ -1,9 +1,7 @@
 package restful;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.*;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,11 +9,17 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
+
+
+import businessrule.*;
 
 /**
  * Created by bluedog on 1/24/2017.
  */
-public class TestConnection {
+public class getData {
 
     // http://localhost:8080/RESTfulExample/json/product/get
     public static void main(String[] args) {
@@ -46,7 +50,15 @@ public class TestConnection {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             JsonParser jsonparser = new JsonParser();
             JsonObject businessRule =  (JsonObject)jsonparser.parse(jsonString);
-            System.out.println(gson.toJson(businessRule));
+            JsonArray jArray = (JsonArray) businessRule.get("items");
+
+            JsonObject mJsonObject;
+            for (int i = 0; i < jArray.size() ; i++)
+            {
+                mJsonObject = (JsonObject) jArray.get(i);
+                BusinessRule b = new BusinessRule(Integer.parseInt(mJsonObject.get("ruleid").toString()), mJsonObject.get("authorid").toString(), mJsonObject.get("type").toString(), mJsonObject.get("operator").toString(), mJsonObject.get("firstvalue").toString(), mJsonObject.get("lastvalue").toString() );
+            }
+
 
             conn.disconnect();
 
@@ -59,6 +71,7 @@ public class TestConnection {
             e.printStackTrace();
 
         }
+
 
     }
 }
