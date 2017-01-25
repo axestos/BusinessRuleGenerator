@@ -21,7 +21,8 @@ public class InterEntityCompareRule extends BusinessRule {
 		String triggernameTable1 = tablename_attr1+type+ruleid;
 		String triggernameTable2 = tablename_attr2+type+ruleid;
 		System.out.println(toStringTableOne(triggernameTable1, attrTable1, attrTable2, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode));
-		if(interEntityModifiable = true){
+		if(interEntityModifiable == true){
+			System.out.println("\n");
 			System.out.println(toStringTableTwo(triggernameTable2, attrTable1, attrTable2, cursorID_table2, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode));
 		}
 	}
@@ -43,10 +44,10 @@ public class InterEntityCompareRule extends BusinessRule {
 							   "close "+cursorID_table1+";\n"+
 							   "l_passed := p_"+tablename_attr1+"_row.new_"+attrTable1+" "+ getOperator(operator)+" "+remoteID_attr2+";\n"+
 							   "if not l_passed then\n"+
-							   "l_error_stack := l_error_stack || '"+errorCode+"';\n"+
+							   "raise_application_error (-20800,'"+errorCode+"');\n"+
 							   "end if;\n"+
 							   "end;";
-		return generatedDeclare /*+ generateBegin*/;
+		return generatedDeclare + generateBegin;
 	}
 	
 	public String toStringTableTwo(String triggername, String attrTable1, String attrTable2, String cursorID_table2, String tablename_attr2, String remoteID_attr2, String tablename_attr1, String remoteID_attr1, String errorCode){
@@ -56,7 +57,7 @@ public class InterEntityCompareRule extends BusinessRule {
 								  "\nDECLARE \n"+
 								  "l_passed boolean := true;\n"+
 								  "cursor " + cursorID_table2+" is\n"+
-								  "SELECT "+first+"\n"+
+								  "SELECT min("+first+")\n"+
 								  "from "+tablename_attr1+
 								  "\nwhere "+tablename_attr1+".id = p_"+tablename_attr2+"_row.new_"+tablename_attr1+"_id;\n"+
 								  remoteID_attr1+" "+last+"%type;\n";
@@ -64,12 +65,12 @@ public class InterEntityCompareRule extends BusinessRule {
 							   "open "+cursorID_table2+";\n"+
 							   "fetch "+cursorID_table2+" into "+remoteID_attr2+";\n"+
 							   "close "+cursorID_table2+";\n"+
-							   "l_passed := p_"+tablename_attr1+"_row.new_"+attrTable1+" "+ getOperator(operator)+" "+remoteID_attr2+";\n"+
+							   "l_passed := p_"+tablename_attr2+"_row.new_"+attrTable2+" "+ getOtherOperator(operator)+" "+remoteID_attr1+";\n"+
 							   "if not l_passed then\n"+
-							   "l_error_stack := l_error_stack || '"+errorCode+"';\n"+
+							   "raise_application_error (-20800,'"+errorCode+"');\n"+
 							   "end if;\n"+
 							   "end;";
-		return generatedDeclare /*+ generateBegin*/;
+		return generatedDeclare + generateBegin;
 		}
 	
 	public String getOperator(String operator){
@@ -90,6 +91,28 @@ public class InterEntityCompareRule extends BusinessRule {
 		}
 		if (operator.equals("GreaterOrEqualTo")){
 			operator = ">=";
+		}
+		return operator;
+	}
+	
+	public String getOtherOperator(String operator){
+		if (operator.equals("NotEquals")){
+			operator= "<>";
+		}
+		if (operator.equals("Equals")){
+			operator= "=";
+		}
+		if (operator.equals("LessThan")){
+			operator = ">";
+		}
+		if (operator.equals("GreaterThan")){
+			operator = "<";
+		}
+		if (operator.equals("LessOrEqualTo")){
+			operator = ">=";
+		}
+		if (operator.equals("GreaterOrEqualTo")){
+			operator = "<=";
 		}
 		return operator;
 	}
