@@ -66,8 +66,7 @@ public class getData {
                 if(!mJsonObject.get("range").equals("EMPTY")){
                     b.setRange(mJsonObject.get("range").toString());
                 }
-
-                b.generateBusinessRule(b);
+                b.generateBusinessRule();
             }
 
 
