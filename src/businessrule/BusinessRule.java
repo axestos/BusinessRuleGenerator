@@ -10,6 +10,8 @@ public class BusinessRule implements BusinessRuleType {
 	public String first;
 	public String last;
 	public String range;
+	public boolean interEntityModifiable; 
+	public String errorCode;
 
 	public BusinessRule(int ruleid, String authorid, String type, String operator, String first, String last) {
 		super();
@@ -19,6 +21,22 @@ public class BusinessRule implements BusinessRuleType {
 		this.operator = operator;
 		this.first = first;
 		this.last = last;
+	}
+
+	public String getErrorCode() {
+		return errorCode;
+	}
+
+	public void setErrorCode(String errorCode) {
+		this.errorCode = errorCode;
+	}
+
+	public boolean isInterEntityModifiable() {
+		return interEntityModifiable;
+	}
+
+	public void setInterEntityModifiable(boolean interEntityModifiable) {
+		this.interEntityModifiable = interEntityModifiable;
 	}
 
 	public String getType() {
@@ -85,7 +103,6 @@ public class BusinessRule implements BusinessRuleType {
 		this.rangeAttribute = rangeAttribute;
 	}
 
-
 	public String getRange() {
 		return range;
 	}
@@ -123,13 +140,13 @@ public class BusinessRule implements BusinessRuleType {
 		}
 		
 		if (type.equals("ent")) {
-			new EntityOtherRule(ruleid, authorid, type, operator, first, last);
+			new EntityOtherRule(ruleid, authorid, type, operator, first, last, errorCode);
 		}
 		if (type.equals("int")) {
-			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last);
+			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode);
 		}
 		if (type.equals("mod")) {
-			new ModifyRule(ruleid, authorid, type, operator, first, last);
+			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode);
 		}
 
 	}
