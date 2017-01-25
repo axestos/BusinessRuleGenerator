@@ -9,7 +9,7 @@ public class BusinessRule implements BusinessRuleType {
 	public String first;
 	public String last;
 	public String range;
-	public boolean interEntityModifiable; 
+	public boolean interEntityModifiable = false;
 	public String errorCode;
 
 	public BusinessRule(int ruleid, String authorid, String type, String operator, String first, String last) {

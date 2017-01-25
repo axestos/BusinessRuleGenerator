@@ -66,6 +66,12 @@ public class getData {
                 if(!mJsonObject.get("range").equals("EMPTY")){
                     b.setRange(mJsonObject.get("range").toString());
                 }
+                if(!mJsonObject.get("changeableinterent").equals("EMPTY")){
+                    int booleanInt = Integer.parseInt(mJsonObject.get("changeableinterent").toString());
+                    if (booleanInt != 0){
+                        b.setInterEntityModifiable(true);
+                    }
+                }
                 b.generateBusinessRule();
             }
 
