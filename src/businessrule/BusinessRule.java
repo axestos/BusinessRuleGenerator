@@ -11,6 +11,7 @@ public class BusinessRule implements BusinessRuleType {
 	public String range;
 	public boolean interEntityModifiable = false;
 	public String errorCode;
+	public String generatedCode;
 
 	public BusinessRule(int ruleid, String authorid, String type, String operator, String first, String last) {
 		super();
@@ -100,6 +101,14 @@ public class BusinessRule implements BusinessRuleType {
 
 	public void setRange(String range) {
 		this.range = range;
+	}
+	
+	public String getGeneratedCode() {
+		return generatedCode;
+	}
+
+	public void setGeneratedCode(String generatedCode) {
+		this.generatedCode = generatedCode;
 	}
 
 	//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.

@@ -5,6 +5,7 @@ public class InterEntityCompareRule extends BusinessRule {
 
 	public InterEntityCompareRule(int ruleid, String authorid, String type, String operator, String first, String last, boolean interEntityModifiable, String errorCode) {
 		super(ruleid, authorid, type, operator, first, last);
+		setInterEntityModifiable(interEntityModifiable);
 		generateInterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode);
 	}
 	
@@ -21,10 +22,14 @@ public class InterEntityCompareRule extends BusinessRule {
 		String triggernameTable1 = tablename_attr1+type+ruleid;
 		String triggernameTable2 = tablename_attr2+type+ruleid;
 		System.out.println(toStringTableOne(triggernameTable1, attrTable1, attrTable2, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode));
+		setGeneratedCode(toStringTableOne(triggernameTable1, attrTable1, attrTable2, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode));
 		if(interEntityModifiable == true){
 			System.out.println("\n");
 			System.out.println(toStringTableTwo(triggernameTable2, attrTable1, attrTable2, cursorID_table2, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode));
+			setGeneratedCode(toStringTableOne(triggernameTable1, attrTable1, attrTable2, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode + 
+					toStringTableTwo(triggernameTable2, attrTable1, attrTable2, cursorID_table2, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode)));
 		}
+		
 	}
 
 	public String toStringTableOne(String triggername, String attrTable1, String attrTable2, String cursorID_table1, String tablename_attr2, String remoteID_attr2, String tablename_attr1, String remoteID_attr1, String errorCode){
@@ -45,8 +50,10 @@ public class InterEntityCompareRule extends BusinessRule {
 							   "l_passed := p_"+tablename_attr1+"_row.new_"+attrTable1+" "+ getOperator(operator)+" "+remoteID_attr2+";\n"+
 							   "if not l_passed then\n"+
 							   "raise_application_error (-20800,'"+errorCode+"');\n"+
-							   "end if;\n"+
-							   "end;";
+							   "end if;\n";
+		if(interEntityModifiable == false){
+			generateBegin += "end;";
+		}
 		return generatedDeclare + generateBegin;
 	}
 	

@@ -13,6 +13,7 @@ public class AttributeRangeRule extends BusinessRule {
 		String attribute = tableAttribute[1];
 		String constrainname = "constraint"+ruleid;
 		String constraintstatement = attribute+" "+getOperator(operator)+" "+first+" and "+last;
+		setGeneratedCode(toString(tablename, constrainname, constraintstatement));
 		System.out.println(toString(tablename, constrainname, constraintstatement));
 	}
 	public String toString(String tablename, String constrainname, String constraintstatement){

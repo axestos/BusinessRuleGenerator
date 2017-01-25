@@ -16,6 +16,7 @@ public class TupleCompareRule extends BusinessRule {
 		String attribute2 = tableAttribute2[1];
 		String constrainname = "constraint"+ruleid;
 		String constraintstatement = attribute+" "+getOperator(operator)+" "+attribute2;
+		setGeneratedCode(toString(tablename, constrainname, constraintstatement));
 		System.out.println(toString(tablename, constrainname, constraintstatement));
 	}
 	public String toString(String tablename, String constrainname, String constraintstatement){
