@@ -10,9 +10,68 @@ public class InterEntityCompareRule extends BusinessRule {
 	
 	
 	public void generateInterEntityCompareRule(int ruleid, String authorid, String type, String operator, String first, String last, boolean interEntityModifiable, String errorCode){
-		
+		String attrTable1 = first.split("\\.")[1];
+		String attrTable2 = last.split("\\.")[1];
+		String tablename_attr2 = last.split("\\.")[0];
+		String remoteID_attr2 = "l_"+tablename_attr2;
+		String cursorID_table1 = "cursor"+tablename_attr2+ruleid;
+		String tablename_attr1 = first.split("\\.")[0];
+		String cursorID_table2 = "cursor"+tablename_attr1+ruleid;
+		String remoteID_attr1 = "l_"+tablename_attr1;
+		String triggernameTable1 = tablename_attr1+type+ruleid;
+		String triggernameTable2 = tablename_attr2+type+ruleid;
+		System.out.println(toStringTableOne(triggernameTable1, attrTable1, attrTable2, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode));
+		if(interEntityModifiable = true){
+			System.out.println(toStringTableTwo(triggernameTable2, attrTable1, attrTable2, cursorID_table2, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode));
+		}
 	}
 
+	public String toStringTableOne(String triggername, String attrTable1, String attrTable2, String cursorID_table1, String tablename_attr2, String remoteID_attr2, String tablename_attr1, String remoteID_attr1, String errorCode){
+		String generatedDeclare = "Create or replace trigger "+triggername+
+								  "\nbefore insert or update on "+tablename_attr1+
+								  "\nfor each row"+
+								  "\nDECLARE \n"+
+								  "l_passed boolean := true;\n"+
+								  "cursor " + cursorID_table1+" is\n"+
+								  "SELECT "+last+"\n"+
+								  "from "+tablename_attr2+
+								  "\nwhere "+tablename_attr2+".id = p_"+tablename_attr1+"_row.new_"+tablename_attr2+"_id;\n"+
+								  remoteID_attr2+" "+first+"%type;\n";
+		String generateBegin = "BEGIN\n"+
+							   "open "+cursorID_table1+";\n"+
+							   "fetch "+cursorID_table1+" into "+remoteID_attr2+";\n"+
+							   "close "+cursorID_table1+";\n"+
+							   "l_passed := p_"+tablename_attr1+"_row.new_"+attrTable1+" "+ getOperator(operator)+" "+remoteID_attr2+";\n"+
+							   "if not l_passed then\n"+
+							   "l_error_stack := l_error_stack || '"+errorCode+"';\n"+
+							   "end if;\n"+
+							   "end;";
+		return generatedDeclare /*+ generateBegin*/;
+	}
+	
+	public String toStringTableTwo(String triggername, String attrTable1, String attrTable2, String cursorID_table2, String tablename_attr2, String remoteID_attr2, String tablename_attr1, String remoteID_attr1, String errorCode){
+		String generatedDeclare = "Create or replace trigger "+triggername+
+								  "\nbefore insert or update on "+tablename_attr2+
+								  "\nfor each row"+
+								  "\nDECLARE \n"+
+								  "l_passed boolean := true;\n"+
+								  "cursor " + cursorID_table2+" is\n"+
+								  "SELECT "+first+"\n"+
+								  "from "+tablename_attr1+
+								  "\nwhere "+tablename_attr1+".id = p_"+tablename_attr2+"_row.new_"+tablename_attr1+"_id;\n"+
+								  remoteID_attr1+" "+last+"%type;\n";
+		String generateBegin = "BEGIN\n"+
+							   "open "+cursorID_table2+";\n"+
+							   "fetch "+cursorID_table2+" into "+remoteID_attr2+";\n"+
+							   "close "+cursorID_table2+";\n"+
+							   "l_passed := p_"+tablename_attr1+"_row.new_"+attrTable1+" "+ getOperator(operator)+" "+remoteID_attr2+";\n"+
+							   "if not l_passed then\n"+
+							   "l_error_stack := l_error_stack || '"+errorCode+"';\n"+
+							   "end if;\n"+
+							   "end;";
+		return generatedDeclare /*+ generateBegin*/;
+		}
+	
 	public String getOperator(String operator){
 		if (operator.equals("NotEquals")){
 			operator= "<>";
