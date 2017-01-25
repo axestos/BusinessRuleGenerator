@@ -24,7 +24,7 @@ public class InterEntityCompareRule extends BusinessRule {
 		System.out.println(toStringTableOne(triggernameTable1, attrTable1, attrTable2, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode));
 		setGeneratedCode(toStringTableOne(triggernameTable1, attrTable1, attrTable2, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode));
 		if(interEntityModifiable == true){
-			System.out.println("/\n");
+			System.out.println("\n");
 			System.out.println(toStringTableTwo(triggernameTable2, attrTable1, attrTable2, cursorID_table2, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode));
 			setGeneratedCode(toStringTableOne(triggernameTable1, attrTable1, attrTable2, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode + 
 					toStringTableTwo(triggernameTable2, attrTable1, attrTable2, cursorID_table2, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode)));
@@ -51,10 +51,8 @@ public class InterEntityCompareRule extends BusinessRule {
 							   "if not l_passed then\n"+
 							   "raise_application_error (-20800,'"+errorCode+"');\n"+
 							   "end if;\n"+
-							   "end;";
-		if(interEntityModifiable == false){
-			generateBegin += "/";
-		}
+							   "end;\n"+
+							   "/";
 		return generatedDeclare + generateBegin;
 	}
 	
@@ -77,7 +75,8 @@ public class InterEntityCompareRule extends BusinessRule {
 							   "if not l_passed then\n"+
 							   "raise_application_error (-20800,'"+errorCode+"');\n"+
 							   "end if;\n"+
-							   "end;";
+							   "end;\n"+
+							   "/";
 		return generatedDeclare + generateBegin;
 		}
 	
