@@ -12,7 +12,7 @@ public class AttributeOtherRule extends BusinessRule {
 			String tablename = tableAttribute[0];
 			String attribute = tableAttribute[1];
 			String constrainname = "constraint"+ruleid;
-			String constraintstatement = "substr("+attribute+", "+range+") "+getOperator(operator)+" ("+"'"+first+"'"+" and '"+last+"'";
+			String constraintstatement = "substr("+attribute+", "+range+") "+getOperator(operator)+" ("+"'"+first+"'"+" and '"+last+"')";
 			System.out.println(toString(tablename, constrainname, constraintstatement));
 		}
 		public String toString(String tablename, String constrainname, String constraintstatement){
