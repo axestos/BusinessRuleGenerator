@@ -5,7 +5,6 @@ public class BusinessRule implements BusinessRuleType {
 	public String authorid;
 	public String type;
 	public String operator;
-	public String compare;
 	public String rangeAttribute;
 	public String first;
 	public String last;
@@ -69,14 +68,6 @@ public class BusinessRule implements BusinessRuleType {
 
 	public void setAuthorid(String authorid) {
 		this.authorid = authorid;
-	}
-
-	public String getCompare() {
-		return compare;
-	}
-
-	public void setCompare(String compare) {
-		this.compare = compare;
 	}
 
 	public String getFirst() {

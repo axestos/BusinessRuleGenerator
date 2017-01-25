@@ -57,6 +57,15 @@ public class getData {
             {
                 mJsonObject = (JsonObject) jArray.get(i);
                 BusinessRule b = new BusinessRule(Integer.parseInt(mJsonObject.get("ruleid").toString()), mJsonObject.get("authorid").toString(), mJsonObject.get("type").toString(), mJsonObject.get("operator").toString(), mJsonObject.get("firstvalue").toString(), mJsonObject.get("lastvalue").toString() );
+                if(!mJsonObject.get("errorcode").equals("EMPTY")){
+                    b.setErrorCode(mJsonObject.get("errorcode").toString());
+                }
+                if(!mJsonObject.get("rangeattribute").equals("EMPTY")){
+                    b.setRangeAttribute(mJsonObject.get("rangeattribute").toString());
+                }
+                if(!mJsonObject.get("range").equals("EMPTY")){
+                    b.setRange(mJsonObject.get("range").toString());
+                }
             }
 
 
