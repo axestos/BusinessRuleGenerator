@@ -2,5 +2,5 @@ package businessrule;
 
 public interface BusinessRuleType {
 
-	public void generateBusinessRule();
+	public void generateBusinessRule(BusinessRule b);
 }
