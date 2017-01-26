@@ -75,7 +75,8 @@ public class getData {
                 b.generateBusinessRule();
                 String SQLCode = b.getGeneratedCode();
                 String authorID = b.getAuthorid();
-
+                writeData w = new writeData();
+                w.execWrite(authorID, SQLCode);
             }
 
 
