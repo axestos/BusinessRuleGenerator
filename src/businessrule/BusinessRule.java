@@ -12,7 +12,8 @@ public class BusinessRule implements BusinessRuleType {
 	public boolean interEntityModifiable = false;
 	public String errorCode;
 	public String generatedCode;
-
+	public String beforeAfter;
+	
 	public BusinessRule(int ruleid, String authorid, String type, String operator, String first, String last) {
 		super();
 		this.ruleid = ruleid;
@@ -21,6 +22,14 @@ public class BusinessRule implements BusinessRuleType {
 		this.operator = operator;
 		this.first = first;
 		this.last = last;
+	}
+
+	public String getBeforeAfter() {
+		return beforeAfter;
+	}
+
+	public void setBeforeAfter(String beforeAfter) {
+		this.beforeAfter = beforeAfter;
 	}
 
 	public String getErrorCode() {
@@ -141,7 +150,7 @@ public class BusinessRule implements BusinessRuleType {
 			new EntityOtherRule(ruleid, authorid, type, operator, first, last, errorCode);
 		}
 		if (type.equals("int")) {
-			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode);
+			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode, beforeAfter);
 		}
 		if (type.equals("mod")) {
 			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode);
