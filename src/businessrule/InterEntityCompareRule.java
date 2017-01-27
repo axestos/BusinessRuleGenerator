@@ -34,7 +34,7 @@ public class InterEntityCompareRule extends BusinessRule {
 
 	public String toStringTableOne(String triggername, String attrTable1, String attrTable2, String cursorID_table1, String tablename_attr2, String remoteID_attr2, String tablename_attr1, String remoteID_attr1, String errorCode, String beforeAfter){
 		String generatedDeclare = "Create or replace trigger "+triggername+
-								  "\n"+beforeAfter+" insert or update on "+tablename_attr2+
+								  "\n"+beforeAfter+" insert or update on "+tablename_attr1+
 								  "\nfor each row"+
 								  "\nDECLARE \n"+
 								  "l_passed boolean := true;\n"+
