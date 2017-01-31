@@ -37,8 +37,8 @@
             <file leaf-file-name="EntityOtherRule.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="476">
-                    <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+                  <state relative-caret-position="459">
+                    <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
                     <folding />
                   </state>
                 </provider>
@@ -928,7 +928,7 @@
       <workItem from="1485271958689" duration="47000" />
       <workItem from="1485341519839" duration="12775000" />
       <workItem from="1485431382345" duration="6471000" />
-      <workItem from="1485860727870" duration="8861000" />
+      <workItem from="1485860727870" duration="8958000" />
     </task>
     <task id="LOCAL-00001" summary="businesrule setters toegevoegd in JSON">
       <created>1485355590416</created>
@@ -1014,11 +1014,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485874367008</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Modify rule gemaakt, en ook new variabelen gemaakt &quot;firstValue&quot;, die wordt opgehaald uit de apex database.&#10;&#10;Ook zelfde gedaan voor Entity Other Rule.">
+      <created>1485874553717</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1485874553717</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35907000" />
+    <option name="totallyTimeSpent" value="36004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -1450,18 +1457,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/businessrule/ModifyRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="200" selection-start-line="20" selection-start-column="184" selection-end-line="20" selection-end-column="200" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
           <folding />
         </state>
       </provider>

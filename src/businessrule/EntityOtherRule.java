@@ -14,7 +14,6 @@ public class EntityOtherRule extends BusinessRule {
 		String attrTable1_value = firstValue;
 		String tablename_attr1 = first.split("\\.")[0];
 		String tablename_attr2 = last.split("\\.")[0];
-		String cursorID_table1 = "cursor"+tablename_attr2+ruleid;
 		String triggernameTable1 = tablename_attr1+type+ruleid;
 		setGeneratedCode(toString(triggernameTable1, attrTable1, tablename_attr2, tablename_attr1, errorCode, beforeAfter, attrTable1_value));
 	}
