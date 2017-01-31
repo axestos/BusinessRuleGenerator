@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="838ae1d0-9dae-4d8c-9643-11f55c3c5ba1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessrule/EntityOtherRule.java" afterPath="$PROJECT_DIR$/src/businessrule/EntityOtherRule.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessrule/ModifyRule.java" afterPath="$PROJECT_DIR$/src/businessrule/ModifyRule.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,11 +25,21 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="InterEntityCompareRule.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="InterEntityCompareRule.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="323">
-                    <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="102" selection-end-column="5" />
+                  <state relative-caret-position="425">
+                    <caret line="88" column="9" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="ModifyRule.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/businessrule/ModifyRule.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="374">
+                    <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
                     <folding />
                   </state>
                 </provider>
@@ -54,16 +65,6 @@
                 <element signature="e#3611#3612#0" expanded="true" />
                 <element signature="e#3646#3647#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModifyRule.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/businessrule/ModifyRule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -128,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityOtherRule.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EntityOtherRule.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -172,11 +173,11 @@
         <option value="$PROJECT_DIR$/src/businessrule/AttributeRangeRule.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/restful/TestConnection.java" />
-        <option value="$PROJECT_DIR$/src/businessrule/EntityOtherRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/BusinessRuleType.java" />
         <option value="$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java" />
         <option value="$PROJECT_DIR$/src/restful/getData.java" />
         <option value="$PROJECT_DIR$/src/businessrule/BusinessRule.java" />
+        <option value="$PROJECT_DIR$/src/businessrule/EntityOtherRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/ModifyRule.java" />
       </list>
     </option>
@@ -928,7 +929,7 @@
       <workItem from="1485271958689" duration="47000" />
       <workItem from="1485341519839" duration="12775000" />
       <workItem from="1485431382345" duration="6471000" />
-      <workItem from="1485860727870" duration="6083000" />
+      <workItem from="1485860727870" duration="6899000" />
     </task>
     <task id="LOCAL-00001" summary="businesrule setters toegevoegd in JSON">
       <created>1485355590416</created>
@@ -979,11 +980,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485870942394</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modify rule gemaakt, en ook new variabelen gemaakt &quot;firstValue&quot;, die wordt opgehaald uit de apex database.">
+      <created>1485871774137</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1485871774137</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33129000" />
+    <option name="totallyTimeSpent" value="33945000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -1001,7 +1009,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14739583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14739583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1355,14 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/TupleOtherRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/businessrule/AttributeListRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1387,14 +1387,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRule.java">
+    <entry file="file://$PROJECT_DIR$/src/businessrule/TupleOtherRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="156" column="95" selection-start-line="156" selection-start-column="95" selection-end-line="156" selection-end-column="95" />
-          <folding>
-            <element signature="e#3611#3612#0" expanded="true" />
-            <element signature="e#3646#3647#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,26 +1403,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
+    <entry file="file://$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="88" column="9" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java">
+    <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="102" selection-end-column="5" />
+        <state relative-caret-position="461">
+          <caret line="156" column="95" selection-start-line="156" selection-start-column="95" selection-end-line="156" selection-end-column="95" />
+          <folding>
+            <element signature="e#3611#3612#0" expanded="true" />
+            <element signature="e#3646#3647#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/businessrule/ModifyRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
           <folding />
         </state>
       </provider>

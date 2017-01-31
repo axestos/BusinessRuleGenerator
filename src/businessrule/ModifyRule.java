@@ -27,7 +27,7 @@ public class ModifyRule extends BusinessRule {
 				"cursor " + cursorID_table1+" is\n"+
 				"SELECT "+tablename_attr1+"."+attrTable1+"\n"+
 				"from "+tablename_attr1+
-				"\nwhere "+tablename_attr1+".id = p_"+tablename_attr2+"_row.new_"+tablename_attr1+"_id;\n"+
+				"\nwhere "+tablename_attr1+"_id = p_"+tablename_attr2+"_row.new_"+tablename_attr1+"_id;\n"+
 				attrTable1+" "+first+"%type;\n";
 		String generateBegin = "BEGIN\n"+
 				"if p_"+tablename_attr2+"_row.brg_oper = 'INS' then\n"+
