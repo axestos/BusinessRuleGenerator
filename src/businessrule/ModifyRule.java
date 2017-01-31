@@ -5,10 +5,10 @@ public class ModifyRule extends BusinessRule {
 	public ModifyRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String firstValue) {
 		super(ruleid, authorid, type, operator, first, last);
 		setInterEntityModifiable(interEntityModifiable);
-		generateModifyRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode, beforeAfter);
+		generateModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue);
 	}
 
-	public void generateModifyRule(int ruleid, String authorid, String type, String operator, String first, String last, boolean interEntityModifiable, String errorCode, String beforeAfter){
+	public void generateModifyRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String firstValue){
 		String attrTable1 = first.split("\\.")[1];
 		String attrTable1_value = firstValue;
 		String tablename_attr1 = first.split("\\.")[0];
