@@ -7,6 +7,7 @@ public class BusinessRule implements BusinessRuleType {
 	public String operator;
 	public String rangeAttribute;
 	public String first;
+	public String firstValue;
 	public String last;
 	public String range;
 	public boolean interEntityModifiable = false;
@@ -153,9 +154,12 @@ public class BusinessRule implements BusinessRuleType {
 			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode, beforeAfter);
 		}
 		if (type.equals("mod")) {
-			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode);
+			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue);
 		}
 
 	}
 
+	public void setFirstValue(String firstValue) {
+		this.firstValue = firstValue;
+	}
 }
