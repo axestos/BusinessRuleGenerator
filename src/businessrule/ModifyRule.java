@@ -34,7 +34,7 @@ public class ModifyRule extends BusinessRule {
 				"open "+cursorID_table1+";\n"+
 				"fetch "+cursorID_table1+" into l_"+attrTable1+";\n"+
 				"close "+cursorID_table1+";\n"+
-				"l_passed := "+attrTable1+" != '"+attrTable1_value+"'\n"+
+				"l_passed := "+attrTable1+" "+getOperator(operator)+" "+attrTable1_value+"\n"+
 				"if not l_passed then\n"+
 				"raise_application_error (-20800,'"+errorCode+"');\n"+
 				"end if;\n"+
@@ -42,5 +42,27 @@ public class ModifyRule extends BusinessRule {
 				"/";
         return generatedDeclare + generateBegin;
 	}
+
+    public String getOperator(String operator){
+        if (operator.equals("NotEquals")){
+            operator= "<>";
+        }
+        if (operator.equals("Equals")){
+            operator= "=";
+        }
+        if (operator.equals("LessThan")){
+            operator = "<";
+        }
+        if (operator.equals("GreaterThan")){
+            operator = ">";
+        }
+        if (operator.equals("LessOrEqualTo")){
+            operator = "<=";
+        }
+        if (operator.equals("GreaterOrEqualTo")){
+            operator = ">=";
+        }
+        return operator;
+    }
 
 }
