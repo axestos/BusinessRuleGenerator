@@ -148,13 +148,13 @@ public class BusinessRule implements BusinessRuleType {
 		}
 		
 		if (type.equals("ent")) {
-			new EntityOtherRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue);
+			new EntityOtherRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
 		}
 		if (type.equals("int")) {
 			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode, beforeAfter);
 		}
 		if (type.equals("mod")) {
-			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue);
+			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
 		}
 
 	}

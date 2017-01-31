@@ -3,7 +3,7 @@ package businessrule;
 
 public class EntityOtherRule extends BusinessRule {
 
-	public EntityOtherRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String firstValue) {
+	public EntityOtherRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String firstValue, String beforeAfter) {
 		super(ruleid, authorid, type, operator, first, last);
 		setFirstValue(firstValue);
 		generateOtherRule(ruleid, authorid, type, operator, first, last, errorCode, beforeAfter, firstValue);
@@ -11,14 +11,15 @@ public class EntityOtherRule extends BusinessRule {
 
 	public void generateOtherRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String beforeAfter, String firstValue){
 		String attrTable1 = first.split("\\.")[1];
+		String attrTable1_value = firstValue;
 		String tablename_attr1 = first.split("\\.")[0];
 		String tablename_attr2 = last.split("\\.")[0];
 		String cursorID_table1 = "cursor"+tablename_attr2+ruleid;
 		String triggernameTable1 = tablename_attr1+type+ruleid;
-		setGeneratedCode(toString(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, tablename_attr1, errorCode, beforeAfter, firstValue));
+		setGeneratedCode(toString(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, tablename_attr1, errorCode, beforeAfter, attrTable1_value));
 	}
 
-	private String toString(String triggername, String attrTable1, String cursorID_table1, String tablename_attr2, String tablename_attr1, String errorCode, String beforeAfter, String firstValue) {
+	private String toString(String triggername, String attrTable1, String cursorID_table1, String tablename_attr2, String tablename_attr1, String errorCode, String beforeAfter, String attrTable1_value) {
 		String generatedDeclare = "Create or replace trigger "+triggername+
 				"\n"+beforeAfter+" insert or update on "+tablename_attr1+
 				"\nfor each row"+
