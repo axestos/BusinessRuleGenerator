@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="838ae1d0-9dae-4d8c-9643-11f55c3c5ba1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessrule/EntityOtherRule.java" afterPath="$PROJECT_DIR$/src/businessrule/EntityOtherRule.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,8 +36,8 @@
             <file leaf-file-name="EntityOtherRule.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="459">
-                    <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+                  <state relative-caret-position="102">
+                    <caret line="30" column="88" selection-start-line="30" selection-start-column="88" selection-end-line="30" selection-end-column="88" />
                     <folding />
                   </state>
                 </provider>
@@ -141,8 +140,8 @@
       <file leaf-file-name="ModifyRule.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/businessrule/ModifyRule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="200" selection-start-line="20" selection-start-column="184" selection-end-line="20" selection-end-column="200" />
+            <state relative-caret-position="493">
+              <caret line="29" column="107" selection-start-line="29" selection-start-column="107" selection-end-line="29" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -928,7 +927,7 @@
       <workItem from="1485271958689" duration="47000" />
       <workItem from="1485341519839" duration="12775000" />
       <workItem from="1485431382345" duration="6471000" />
-      <workItem from="1485860727870" duration="8958000" />
+      <workItem from="1485860727870" duration="9227000" />
     </task>
     <task id="LOCAL-00001" summary="businesrule setters toegevoegd in JSON">
       <created>1485355590416</created>
@@ -1021,11 +1020,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485874553717</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Modify rule gemaakt, en ook new variabelen gemaakt &quot;firstValue&quot;, die wordt opgehaald uit de apex database.&#10;&#10;Ook zelfde gedaan voor Entity Other Rule.">
+      <created>1485874650893</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1485874650893</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36004000" />
+    <option name="totallyTimeSpent" value="36273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -1457,18 +1463,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/ModifyRule.java">
+    <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="200" selection-start-line="20" selection-start-column="184" selection-end-line="20" selection-end-column="200" />
+        <state relative-caret-position="102">
+          <caret line="30" column="88" selection-start-line="30" selection-start-column="88" selection-end-line="30" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/EntityOtherRule.java">
+    <entry file="file://$PROJECT_DIR$/src/businessrule/ModifyRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+        <state relative-caret-position="493">
+          <caret line="29" column="107" selection-start-line="29" selection-start-column="107" selection-end-line="29" selection-end-column="107" />
           <folding />
         </state>
       </provider>
