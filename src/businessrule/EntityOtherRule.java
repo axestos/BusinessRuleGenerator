@@ -5,11 +5,11 @@ public class EntityOtherRule extends BusinessRule {
 
 	public EntityOtherRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String firstValue) {
 		super(ruleid, authorid, type, operator, first, last);
-		setInterEntityModifiable(interEntityModifiable);
-		generateOtherRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode, beforeAfter, firstValue);
+		setFirstValue(firstValue);
+		generateOtherRule(ruleid, authorid, type, operator, first, last, errorCode, beforeAfter, firstValue);
 	}
 
-	public void generateOtherRule(int ruleid, String authorid, String type, String operator, String first, String last, boolean interEntityModifiable, String errorCode, String beforeAfter, String firstValue){
+	public void generateOtherRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String beforeAfter, String firstValue){
 		String attrTable1 = first.split("\\.")[1];
 		String tablename_attr1 = first.split("\\.")[0];
 		String tablename_attr2 = last.split("\\.")[0];

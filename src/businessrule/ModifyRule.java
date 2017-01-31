@@ -4,7 +4,7 @@ public class ModifyRule extends BusinessRule {
 
 	public ModifyRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String firstValue) {
 		super(ruleid, authorid, type, operator, first, last);
-		setInterEntityModifiable(interEntityModifiable);
+		setFirstValue(firstValue);
 		generateModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue);
 	}
 
