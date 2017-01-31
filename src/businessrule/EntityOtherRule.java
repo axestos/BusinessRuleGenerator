@@ -16,10 +16,10 @@ public class EntityOtherRule extends BusinessRule {
 		String tablename_attr2 = last.split("\\.")[0];
 		String cursorID_table1 = "cursor"+tablename_attr2+ruleid;
 		String triggernameTable1 = tablename_attr1+type+ruleid;
-		setGeneratedCode(toString(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, tablename_attr1, errorCode, beforeAfter, attrTable1_value));
+		setGeneratedCode(toString(triggernameTable1, attrTable1, tablename_attr2, tablename_attr1, errorCode, beforeAfter, attrTable1_value));
 	}
 
-	private String toString(String triggername, String attrTable1, String cursorID_table1, String tablename_attr2, String tablename_attr1, String errorCode, String beforeAfter, String attrTable1_value) {
+	private String toString(String triggername, String attrTable1, String tablename_attr2, String tablename_attr1, String errorCode, String beforeAfter, String attrTable1_value) {
 		String generatedDeclare = "Create or replace trigger "+triggername+
 				"\n"+beforeAfter+" insert or update on "+tablename_attr1+
 				"\nfor each row"+
