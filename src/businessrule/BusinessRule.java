@@ -5,15 +5,15 @@ public class BusinessRule implements BusinessRuleType {
 	public String authorid;
 	public String type;
 	public String operator;
-	public String rangeAttribute;
 	public String first;
-	public String firstValue;
 	public String last;
-	public String range;
-	public boolean interEntityModifiable = false;
-	public String errorCode;
-	public String generatedCode;
-	public String beforeAfter;
+	private boolean interEntityModifiable = false;
+	private String errorCode;
+	private String generatedCode;
+	private String beforeAfter;
+	private String rangeAttribute;
+	public String firstValue;
+	private String range;
 	
 	public BusinessRule(int ruleid, String authorid, String type, String operator, String first, String last) {
 		super();
@@ -23,6 +23,44 @@ public class BusinessRule implements BusinessRuleType {
 		this.operator = operator;
 		this.first = first;
 		this.last = last;
+	}
+
+	//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.
+	@Override
+	public void generateBusinessRule() {
+
+		//Attribute rules
+		if (type.equals("atr")) {
+			new AttributeRangeRule(ruleid, authorid, type, operator, rangeAttribute, first, last);
+		}
+		if (type.equals("atc")) {
+			new AttributeCompareRule(ruleid, authorid, type, operator, first, last);
+		}
+		if (type.equals("atl")) {
+			new AttributeListRule(ruleid, authorid, type, operator, first, last);
+		}
+		if (type.equals("ato")) {
+			new AttributeOtherRule(ruleid, authorid, type, operator, rangeAttribute, first, last, range);
+		}
+
+		//Tuple Rules
+		if (type.equals("tuc")) {
+			new TupleCompareRule(ruleid, authorid, type, operator, first, last);
+		}
+		if (type.equals("tuo")) {
+			new TupleOtherRule(ruleid, authorid, type, operator, first, last);
+		}
+
+		if (type.equals("ent")) {
+			new EntityOtherRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
+		}
+		if (type.equals("int")) {
+			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode, beforeAfter);
+		}
+		if (type.equals("mod")) {
+			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
+		}
+
 	}
 
 	public String getBeforeAfter() {
@@ -117,46 +155,8 @@ public class BusinessRule implements BusinessRuleType {
 		return generatedCode;
 	}
 
-	public void setGeneratedCode(String generatedCode) {
+	void setGeneratedCode(String generatedCode) {
 		this.generatedCode = generatedCode;
-	}
-
-	//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.
-	@Override
-	public void generateBusinessRule() {
-
-		//Attribute rules
-		if (type.equals("atr")) {
-			new AttributeRangeRule(ruleid, authorid, type, operator, rangeAttribute, first, last);
-		}
-		if (type.equals("atc")) {
-			new AttributeCompareRule(ruleid, authorid, type, operator, first, last);
-		}
-		if (type.equals("atl")) {
-			new AttributeListRule(ruleid, authorid, type, operator, first, last);
-		}
-		if (type.equals("ato")) {
-			new AttributeOtherRule(ruleid, authorid, type, operator, rangeAttribute, first, last, range);
-		}
-		
-		//Tuple Rules
-		if (type.equals("tuc")) {
-			new TupleCompareRule(ruleid, authorid, type, operator, first, last);
-		}
-		if (type.equals("tuo")) {
-			new TupleOtherRule(ruleid, authorid, type, operator, first, last);
-		}
-		
-		if (type.equals("ent")) {
-			new EntityOtherRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
-		}
-		if (type.equals("int")) {
-			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode, beforeAfter);
-		}
-		if (type.equals("mod")) {
-			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
-		}
-
 	}
 
 	public void setFirstValue(String firstValue) {

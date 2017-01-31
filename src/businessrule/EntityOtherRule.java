@@ -9,7 +9,7 @@ public class EntityOtherRule extends BusinessRule {
 		generateOtherRule(ruleid, authorid, type, operator, first, last, errorCode, beforeAfter, firstValue);
 	}
 
-	public void generateOtherRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String beforeAfter, String firstValue){
+	private void generateOtherRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String beforeAfter, String firstValue){
 		String attrTable1 = first.split("\\.")[1];
 		String attrTable1_value = firstValue;
 		String tablename_attr1 = first.split("\\.")[0];
