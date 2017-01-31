@@ -4,10 +4,10 @@ public class AttributeCompareRule extends BusinessRule {
 
 	public AttributeCompareRule(int ruleid, String authorid, String type, String operator, String first, String last){
 		super(ruleid, authorid, type, operator, first, last);
-		generateAttributeCompareRule(ruleid, authorid, type, operator, first, last);
+		generateAttributeCompareRule(ruleid, operator, first, last);
 	}
 
-	private void generateAttributeCompareRule(int ruleid, String authorid, String type, String operator, String first, String last){
+	private void generateAttributeCompareRule(int ruleid, String operator, String first, String last){
 		String [] tableAttribute = first.split("\\.");
 		String tablename = tableAttribute[0];
 		String attribute = tableAttribute[1];

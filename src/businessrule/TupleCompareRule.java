@@ -5,10 +5,10 @@ public class TupleCompareRule extends BusinessRule {
 
 	public TupleCompareRule(int ruleid, String authorid, String type, String operator, String first, String last) {
 		super(ruleid, authorid, type, operator, first, last);
-		generateTupleCompareRule(ruleid, authorid, type, operator, first, last);
+		generateTupleCompareRule(ruleid, operator, first, last);
 	}
 
-	private void generateTupleCompareRule(int ruleid, String authorid, String type, String operator, String first, String last){
+	private void generateTupleCompareRule(int ruleid, String operator, String first, String last){
 		String [] tableAttribute = first.split("\\.");
 		String [] tableAttribute2 = last.split("\\.");
 		String tablename = tableAttribute[0];

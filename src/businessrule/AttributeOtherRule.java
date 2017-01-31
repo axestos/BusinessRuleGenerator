@@ -4,10 +4,10 @@ public class AttributeOtherRule extends BusinessRule {
 
 	public AttributeOtherRule(int ruleid, String authorid, String type, String operator, String rangeAttribute, String first, String last, String range) {
 		super(ruleid, authorid, type, operator, first, last);
-		generateAttributeOtherRule(ruleid, authorid, type, operator, rangeAttribute, first, last, range);
+		generateAttributeOtherRule(ruleid, operator, rangeAttribute, first, last, range);
 		}
 
-		private void generateAttributeOtherRule(int ruleid, String authorid, String type, String operator, String rangeAttribute, String first, String last, String range){
+		private void generateAttributeOtherRule(int ruleid, String operator, String rangeAttribute, String first, String last, String range){
 			String [] tableAttribute = rangeAttribute.split("\\.");
 			String tablename = tableAttribute[0];
 			String attribute = tableAttribute[1];
