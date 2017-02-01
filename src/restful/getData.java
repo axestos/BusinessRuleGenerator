@@ -26,7 +26,7 @@ public class getData {
 
         try {
 
-            URL url = new URL("https://ondora02.hu.nl:8080/ords/stud1681260/123getBR");
+            URL url = new URL("https://ondora02.hu.nl:8080/ords/tosad_2016_2d_team5/118146/BusinessRules");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");
@@ -80,6 +80,7 @@ public class getData {
                 }
                 b.generateBusinessRule();
                 String SQLCode = b.getGeneratedCode();
+                System.out.println(SQLCode);
                 String authorID = b.getAuthorid();
                 writeData w = new writeData();
                 w.execWrite(authorID, SQLCode);

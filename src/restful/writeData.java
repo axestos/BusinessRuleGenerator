@@ -18,7 +18,7 @@ public class writeData {
 
     public void execWrite(String author, String msg)  throws ClientProtocolException, IOException{
             CloseableHttpClient client = HttpClients.createDefault();
-            HttpPost httpPost = new HttpPost("https://ondora02.hu.nl:8080/ords/stud1681260/123getBR");
+            HttpPost httpPost = new HttpPost("https://ondora02.hu.nl:8080/ords/tosad_2016_2d_team5/118146/BusinessRules");
 
             JsonObject record = new JsonObject();
             record.addProperty("author", author);
