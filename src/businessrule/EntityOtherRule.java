@@ -6,10 +6,10 @@ public class EntityOtherRule extends BusinessRule {
 	public EntityOtherRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String firstValue, String beforeAfter) {
 		super(ruleid, authorid, type, operator, first, last);
 		setFirstValue(firstValue);
-		generateOtherRule(ruleid, operator, first, last, errorCode, beforeAfter);
+		generateOtherRule(ruleid, first, last, errorCode, beforeAfter);
 	}
 
-	private void generateOtherRule(int ruleid, String operator, String first, String last, String errorCode, String beforeAfter){
+	private void generateOtherRule(int ruleid, String first, String last, String errorCode, String beforeAfter){
 		String attrTable1 = first.split("\\.")[1];
 		String tablename_attr1 = first.split("\\.")[0];
 		String tablename_attr2 = last.split("\\.")[0];
