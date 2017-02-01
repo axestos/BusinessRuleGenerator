@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="838ae1d0-9dae-4d8c-9643-11f55c3c5ba1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java" afterPath="$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessrule/BusinessRule.java" afterPath="$PROJECT_DIR$/src/businessrule/BusinessRule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/restful/getData.java" afterPath="$PROJECT_DIR$/src/restful/getData.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,21 +29,18 @@
           <file leaf-file-name="BusinessRule.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRule.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1740">
-                  <caret line="60" column="34" lean-forward="false" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#3530#3531#0" expanded="true" />
-                    <element signature="e#3557#3558#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="261">
+                  <caret line="83" column="59" lean-forward="true" selection-start-line="83" selection-start-column="59" selection-end-line="83" selection-end-column="59" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="getData.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="getData.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/restful/getData.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1972">
-                  <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+                <state relative-caret-position="509">
+                  <caret line="85" column="47" lean-forward="true" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
                   <folding />
                 </state>
               </provider>
@@ -65,12 +63,15 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="783">
                   <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-                  <folding />
+                  <folding>
+                    <element signature="e#1187#1188#0" expanded="false" />
+                    <element signature="e#1207#1208#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="InterEntityCompareRule.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="InterEntityCompareRule.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="94">
@@ -98,7 +99,10 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="725">
                   <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-                  <folding />
+                  <folding>
+                    <element signature="e#1102#1103#0" expanded="false" />
+                    <element signature="e#1122#1123#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -108,7 +112,10 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="754">
                   <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-                  <folding />
+                  <folding>
+                    <element signature="e#1274#1275#0" expanded="false" />
+                    <element signature="e#1294#1295#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -131,7 +138,10 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1160">
                   <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-                  <folding />
+                  <folding>
+                    <element signature="e#1629#1630#0" expanded="false" />
+                    <element signature="e#1649#1650#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -143,8 +153,8 @@
           <file leaf-file-name="AttributeCompareRule.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/businessrule/AttributeCompareRule.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="319">
-                  <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
+                <state relative-caret-position="261">
+                  <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
                   <folding>
                     <element signature="e#1030#1031#0" expanded="true" />
                     <element signature="e#1050#1051#0" expanded="true" />
@@ -193,14 +203,14 @@
         <option value="$PROJECT_DIR$/src/businessrule/TupleCompareRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/ModifyRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/BusinessRuleType.java" />
-        <option value="$PROJECT_DIR$/src/restful/getData.java" />
-        <option value="$PROJECT_DIR$/src/businessrule/BusinessRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/AttributeCompareRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/AttributeListRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/AttributeOtherRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/AttributeRangeRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/EntityOtherRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java" />
+        <option value="$PROJECT_DIR$/src/businessrule/BusinessRule.java" />
+        <option value="$PROJECT_DIR$/src/restful/getData.java" />
       </list>
     </option>
   </component>
@@ -809,7 +819,7 @@
       <workItem from="1485948517310" duration="11129000" />
       <workItem from="1485964300084" duration="1626000" />
       <workItem from="1485967746018" duration="628000" />
-      <workItem from="1485968520876" duration="78000" />
+      <workItem from="1485968520876" duration="1283000" />
     </task>
     <task id="LOCAL-00001" summary="businesrule setters toegevoegd in JSON">
       <created>1485355590416</created>
@@ -990,7 +1000,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53896000" />
+    <option name="totallyTimeSpent" value="55101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="2576" height="1426" extended-state="6" />
@@ -999,12 +1009,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32674772" sideWeight="0.48867187" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42553192" sideWeight="0.5109375" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42477202" sideWeight="0.51875" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42477202" sideWeight="0.484375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42477202" sideWeight="0.48125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2925532" sideWeight="0.48789063" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1016,7 +1027,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42553192" sideWeight="0.4890625" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42553192" sideWeight="0.4859375" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1024,7 +1035,6 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32739213" sideWeight="0.49166667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1059,33 +1069,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/restful/getData.java</url>
-          <line>85</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/restful/getData.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/restful/getData.java</url>
-          <line>81</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/restful/getData.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1112,7 +1096,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1629#1630#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1138,10 +1125,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1411">
           <caret line="125" column="48" lean-forward="false" selection-start-line="125" selection-start-column="42" selection-end-line="125" selection-end-column="48" />
-          <folding>
-            <element signature="e#3530#3531#0" expanded="true" />
-            <element signature="e#3557#3558#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,7 +1144,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1207#1208#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1168,7 +1155,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#1274#1275#0" expanded="false" />
+            <element signature="e#1294#1295#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1203,7 +1193,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1629#1630#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1240,7 +1233,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1207#1208#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1269,7 +1265,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1207#1208#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1297,7 +1296,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1207#1208#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1317,7 +1319,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1207#1208#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1388,25 +1393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="60" column="34" lean-forward="false" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
-          <folding>
-            <element signature="e#3530#3531#0" expanded="true" />
-            <element signature="e#3557#3558#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/restful/getData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRuleType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -1419,7 +1405,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
           <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#1102#1103#0" expanded="false" />
+            <element signature="e#1122#1123#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1427,7 +1416,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="e#1274#1275#0" expanded="false" />
+            <element signature="e#1294#1295#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1435,7 +1427,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="783">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1207#1208#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1443,7 +1438,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1160">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1629#1630#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1466,6 +1464,22 @@
             <element signature="e#2174#2175#0" expanded="true" />
             <element signature="e#2194#2195#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="83" column="59" lean-forward="true" selection-start-line="83" selection-start-column="59" selection-end-line="83" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/restful/getData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="85" column="47" lean-forward="true" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

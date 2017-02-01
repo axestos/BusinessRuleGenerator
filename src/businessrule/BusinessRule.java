@@ -1,6 +1,7 @@
 package businessrule;
 
 public class BusinessRule {
+	public String output;
 	public int ruleid;
 	public String authorid;
 	public String type;
@@ -90,6 +91,8 @@ public class BusinessRule {
 	public void setType(String type) {
 		this.type = type;
 	}
+
+	public String getOutput() { return output; }
 
 	public String getOperator() {
 		return operator;
