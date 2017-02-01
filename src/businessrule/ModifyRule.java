@@ -26,7 +26,7 @@ public class ModifyRule extends BusinessRule {
 
 	private String toString(String triggername, String attrTable1, String cursorID_table1, String tablename_attr2, String tablename_attr1, String errorCode, String beforeAfter, String attrTable1_value) {
 		String generatedDeclare = "Create or replace trigger "+triggername+
-				"\n"+beforeAfter+" insert or update on "+tablename_attr1+
+				"\n"+beforeAfter+" insert or update or delete on "+tablename_attr1+
 				"\nfor each row"+
 				"\nDECLARE \n"+
 				"l_passed boolean := true;\n"+
