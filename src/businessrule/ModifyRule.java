@@ -1,6 +1,7 @@
 package businessrule;
 
 public class ModifyRule extends BusinessRule {
+	public String output;
 
 	public ModifyRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String firstValue, String beforeAfter) {
 		super(ruleid, authorid, type, operator, first, last);
@@ -21,8 +22,13 @@ public class ModifyRule extends BusinessRule {
 		String tablename_attr2 = last.split("\\.")[0];
 		String cursorID_table1 = "cursor"+tablename_attr2+ruleid;
 		String triggernameTable1 = tablename_attr1+type+ruleid;
-		setGeneratedCode(toString(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, tablename_attr1, errorCode, beforeAfter, attrTable1_value));
+		this.output = toString(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, tablename_attr1, errorCode, beforeAfter, attrTable1_value);
 	}
+
+	public String getOutput(){
+		return output;
+	}
+
 
 	private String toString(String triggername, String attrTable1, String cursorID_table1, String tablename_attr2, String tablename_attr1, String errorCode, String beforeAfter, String attrTable1_value) {
 		String generatedDeclare = "Create or replace trigger "+triggername+

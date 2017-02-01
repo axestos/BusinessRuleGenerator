@@ -2,6 +2,7 @@ package businessrule;
 
 
 public class TupleCompareRule extends BusinessRule {
+	public String output;
 
 	public TupleCompareRule(int ruleid, String authorid, String type, String operator, String first, String last) {
 		super(ruleid, authorid, type, operator, first, last);
@@ -16,14 +17,19 @@ public class TupleCompareRule extends BusinessRule {
 		String attribute2 = tableAttribute2[1];
 		String constrainname = "constraint"+ruleid;
 		String constraintstatement = attribute+" "+getOperator(operator)+" "+attribute2;
-		setGeneratedCode(toString(tablename, constrainname, constraintstatement));
+		this.output = toString(tablename, constrainname, constraintstatement);
 		System.out.println(toString(tablename, constrainname, constraintstatement));
 	}
 	public String toString(String tablename, String constrainname, String constraintstatement){
 		String string = "Alter table " + tablename +" add constraint " + constrainname + " check("+constraintstatement+");";
 		return string;
 	}
-	
+
+	public String getOutput(){
+		return output;
+	}
+
+
 	public String getOperator(String operator){
 		if (operator.equals("NotEquals")){
 			operator= "<>";
