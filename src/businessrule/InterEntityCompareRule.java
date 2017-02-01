@@ -24,14 +24,17 @@ public class InterEntityCompareRule extends BusinessRule {
 		String triggernameTable1 = tablename_attr1+type+ruleid;
 		String triggernameTable2 = tablename_attr2+type+ruleid;
 		System.out.println(toStringTableOne(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode, beforeAfter));
-		setGeneratedCode(toStringTableOne(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode, beforeAfter));
+		this.output = (toStringTableOne(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode, beforeAfter));
 		if(interEntityModifiable == true){
 			System.out.println("\n");
 			System.out.println(toStringTableTwo(triggernameTable2, attrTable2, cursorID_table2, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode, beforeAfter));
-			setGeneratedCode(toStringTableOne(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode, beforeAfter) +
+			this.output = (toStringTableOne(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode, beforeAfter) +
 					toStringTableTwo(triggernameTable2, attrTable2, cursorID_table2, tablename_attr2, remoteID_attr2 ,tablename_attr1, remoteID_attr1, errorCode, beforeAfter));
 		}
 		
+	}
+	public String getOutput(){
+		return output;
 	}
 
 	public String toStringTableOne(String triggername, String attrTable1, String cursorID_table1, String tablename_attr2, String remoteID_attr2, String tablename_attr1, String remoteID_attr1, String errorCode, String beforeAfter){
