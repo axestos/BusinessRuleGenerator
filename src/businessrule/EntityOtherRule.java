@@ -22,6 +22,7 @@ public class EntityOtherRule extends BusinessRule {
 				"\n"+beforeAfter+" insert or update on "+tablename_attr1+
 				"\nfor each row"+
 				"\nDECLARE \n"+
+				"l_passed boolean := true;\n"+
 				""+tablename_attr1+"\n";
 		String generateBegin = "BEGIN\n"+
 				"SELECT "+tablename_attr1+"."+attrTable1+"\n"+
