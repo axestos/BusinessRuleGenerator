@@ -69,8 +69,8 @@ public class getData {
                 if(!mJsonObject.get("firstvarvalue").equals("EMPTY")){
                     b.setFirstValue(mJsonObject.get("firstvarvalue").toString());
                 }
-                if(!mJsonObject.get("changeableinterent").equals("EMPTY")){
-                    int booleanInt = Integer.parseInt(mJsonObject.get("changeableinterent").toString());
+                if(!mJsonObject.get("changeableinterent").equals(0)){
+                    int booleanInt = Integer.parseInt(String.valueOf(mJsonObject.get("changeableinterent")));
                     if (booleanInt != 0){
                         b.setInterEntityModifiable(true);
                     }
