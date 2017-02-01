@@ -75,6 +75,9 @@ public class getData {
                         b.setInterEntityModifiable(true);
                     }
                 }
+                if(!mJsonObject.get("beforeafter").equals("EMPTY")){
+                    b.setBeforeAfter(mJsonObject.get("beforeafter").toString());
+                }
                 b.generateBusinessRule();
                 String SQLCode = b.getGeneratedCode();
                 String authorID = b.getAuthorid();

@@ -79,10 +79,6 @@ public class BusinessRule implements BusinessRuleType {
 		this.errorCode = errorCode;
 	}
 
-	public boolean isInterEntityModifiable() {
-		return interEntityModifiable;
-	}
-
 	public void setInterEntityModifiable(boolean interEntityModifiable) {
 		this.interEntityModifiable = interEntityModifiable;
 	}
@@ -127,24 +123,8 @@ public class BusinessRule implements BusinessRuleType {
 		this.first = first;
 	}
 
-	public String getLast() {
-		return last;
-	}
-
-	public void setLast(String last) {
-		this.last = last;
-	}
-	
-	public String getRangeAttribute() {
-		return rangeAttribute;
-	}
-
 	public void setRangeAttribute(String rangeAttribute) {
 		this.rangeAttribute = rangeAttribute;
-	}
-
-	public String getRange() {
-		return range;
 	}
 
 	public void setRange(String range) {
