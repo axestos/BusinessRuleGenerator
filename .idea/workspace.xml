@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="838ae1d0-9dae-4d8c-9643-11f55c3c5ba1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/restful/getData.java" afterPath="$PROJECT_DIR$/src/restful/getData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessrule/BusinessRule.java" afterPath="$PROJECT_DIR$/src/businessrule/BusinessRule.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,14 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BusinessRule.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BusinessRule.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-226">
-              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+            <state relative-caret-position="697">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
-                <element signature="e#2223#2224#0" expanded="true" />
-                <element signature="e#2256#2257#0" expanded="true" />
+                <element signature="e#2346#2347#0" expanded="true" />
+                <element signature="e#2379#2380#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getData.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/restful/getData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="78" column="50" selection-start-line="78" selection-start-column="50" selection-end-line="78" selection-end-column="50" />
+            <state relative-caret-position="51">
+              <caret line="59" column="66" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -159,9 +159,9 @@
         <option value="$PROJECT_DIR$/src/businessrule/ModifyRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/InterEntityCompareRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/BusinessRuleType.java" />
-        <option value="$PROJECT_DIR$/src/businessrule/BusinessRule.java" />
         <option value="$PROJECT_DIR$/src/businessrule/EntityOtherRule.java" />
         <option value="$PROJECT_DIR$/src/restful/getData.java" />
+        <option value="$PROJECT_DIR$/src/businessrule/BusinessRule.java" />
       </list>
     </option>
   </component>
@@ -299,7 +299,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/businessrule/EntityOtherRule.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BusinessRuleGenerator.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/restful/getData.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/restful/writeData.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -897,7 +899,7 @@
       <workItem from="1485341519839" duration="12775000" />
       <workItem from="1485431382345" duration="6471000" />
       <workItem from="1485860727870" duration="13389000" />
-      <workItem from="1485948517310" duration="10584000" />
+      <workItem from="1485948517310" duration="11129000" />
     </task>
     <task id="LOCAL-00001" summary="businesrule setters toegevoegd in JSON">
       <created>1485355590416</created>
@@ -1067,11 +1069,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485957765256</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Changeable interent nu default value 0 ipv Empty.">
+      <created>1485963137299</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1485963137299</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51019000" />
+    <option name="totallyTimeSpent" value="51564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="0" />
@@ -1135,7 +1144,8 @@
     <MESSAGE value="get data changes" />
     <MESSAGE value="opmaak en scope changes" />
     <MESSAGE value="Entity Other Rule changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Entity Other Rule changes" />
+    <MESSAGE value="Changeable interent nu default value 0 ipv Empty." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changeable interent nu default value 0 ipv Empty." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1185,8 +1195,8 @@
         <state relative-caret-position="1411">
           <caret line="125" column="48" selection-start-line="125" selection-start-column="42" selection-end-line="125" selection-end-column="48" />
           <folding>
-            <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
+            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#2379#2380#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1450,17 +1460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-226">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-          <folding>
-            <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/businessrule/AttributeRangeRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1519,9 +1518,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/restful/getData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="78" column="50" selection-start-line="78" selection-start-column="50" selection-end-line="78" selection-end-column="50" />
+        <state relative-caret-position="51">
+          <caret line="59" column="66" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessrule/BusinessRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#2379#2380#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

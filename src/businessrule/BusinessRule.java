@@ -30,34 +30,34 @@ public class BusinessRule implements BusinessRuleType {
 	public void generateBusinessRule() {
 
 		//Attribute rules
-		if (type.equals("atr")) {
+		if (type.equals("AttributeRangeRule")) {
 			new AttributeRangeRule(ruleid, authorid, type, operator, rangeAttribute, first, last);
 		}
-		if (type.equals("atc")) {
+		if (type.equals("AttributeCompareRule")) {
 			new AttributeCompareRule(ruleid, authorid, type, operator, first, last);
 		}
-		if (type.equals("atl")) {
+		if (type.equals("AttributeListRule")) {
 			new AttributeListRule(ruleid, authorid, type, operator, first, last);
 		}
-		if (type.equals("ato")) {
+		if (type.equals("AttributeOtherRule")) {
 			new AttributeOtherRule(ruleid, authorid, type, operator, rangeAttribute, first, last, range);
 		}
 
 		//Tuple Rules
-		if (type.equals("tuc")) {
+		if (type.equals("TupleCompareRule")) {
 			new TupleCompareRule(ruleid, authorid, type, operator, first, last);
 		}
-		if (type.equals("tuo")) {
+		if (type.equals("TupleOtherRule")) {
 			new TupleOtherRule(ruleid, authorid, type, operator, first, last);
 		}
 
-		if (type.equals("ent")) {
+		if (type.equals("EntityOtherRule")) {
 			new EntityOtherRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
 		}
-		if (type.equals("int")) {
+		if (type.equals("InterEntityCompareRule")) {
 			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode, beforeAfter);
 		}
-		if (type.equals("mod")) {
+		if (type.equals("ModifyRule")) {
 			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
 		}
 
