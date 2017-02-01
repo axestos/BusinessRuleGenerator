@@ -22,7 +22,7 @@ public class EntityOtherRule extends BusinessRule {
 				"\nfor each row"+
 				"\nDECLARE \n"+
 				"l_passed boolean := true;\n"+
-				""+tablename_attr1+"\n";
+				"l_aantal pls_integer;\n";
 		String generateBegin = "BEGIN\n"+
 				"SELECT count(*) into l_aantal\n"+
 				"from "+tablename_attr1+
