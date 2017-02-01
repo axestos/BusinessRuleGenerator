@@ -10,7 +10,13 @@ public class ModifyRule extends BusinessRule {
 
 	public void generateModifyRule(int ruleid, String type, String first, String last, String errorCode, String beforeAfter, String firstValue){
 		String attrTable1 = first.split("\\.")[1];
-		String attrTable1_value = firstValue;
+		String attrTable1_value;
+		if(isInteger(firstValue)){
+			attrTable1_value = firstValue;
+		}
+		else {
+			attrTable1_value = "'"+firstValue+"'";
+		}
 		String tablename_attr1 = first.split("\\.")[0];
 		String tablename_attr2 = last.split("\\.")[0];
 		String cursorID_table1 = "cursor"+tablename_attr2+ruleid;
@@ -41,6 +47,19 @@ public class ModifyRule extends BusinessRule {
 				"end;\n"+
 				"/";
         return generatedDeclare + generateBegin;
+	}
+
+
+	public static boolean isInteger(String s) {
+		try {
+			Integer.parseInt(s);
+		} catch(NumberFormatException e) {
+			return false;
+		} catch(NullPointerException e) {
+			return false;
+		}
+		// only got here if we didn't return false
+		return true;
 	}
 
     public String getOperator(String operator){
