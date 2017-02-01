@@ -2,6 +2,7 @@ package businessrule;
 
 
 public class EntityOtherRule extends BusinessRule {
+	public String output;
 
 	public EntityOtherRule(int ruleid, String authorid, String type, String operator, String first, String last, String errorCode, String firstValue, String beforeAfter) {
 		super(ruleid, authorid, type, operator, first, last);
@@ -13,7 +14,7 @@ public class EntityOtherRule extends BusinessRule {
 		String attrTable1 = first.split("\\.")[1];
 		String tablename_attr1 = first.split("\\.")[0];
 		String triggernameTable1 = tablename_attr1+type+ruleid;
-		setGeneratedCode(toString(triggernameTable1, attrTable1, tablename_attr1, errorCode, beforeAfter));
+		this.output = toString(triggernameTable1, attrTable1, tablename_attr1, errorCode, beforeAfter);
 	}
 
 	private String toString(String triggername, String attrTable1, String tablename_attr1, String errorCode, String beforeAfter) {
@@ -36,7 +37,11 @@ public class EntityOtherRule extends BusinessRule {
 		return generatedDeclare + generateBegin;
 	}
 
-	
+	public String getOutput(){
+		return output;
+	}
+
+
 	public String getOperator(String operator){
 		if (operator.equals("NotEquals")){
 			operator= "<>";

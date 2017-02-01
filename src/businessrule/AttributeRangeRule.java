@@ -1,6 +1,8 @@
 package businessrule;
 
 public class AttributeRangeRule extends BusinessRule {
+	public String output;
+
 
 	public AttributeRangeRule(int ruleid, String authorid, String type, String operator, String rangeAttribute, String first, String last) {
 		super(ruleid, authorid, type, operator, first, last);
@@ -14,13 +16,19 @@ public class AttributeRangeRule extends BusinessRule {
 		String constrainname = "constraint"+ruleid;
 		String constraintstatement = attribute+" "+getOperator(operator)+" "+first+" and "+last;
 		setGeneratedCode(toString(tablename, constrainname, constraintstatement));
-		System.out.println(toString(tablename, constrainname, constraintstatement));
+		this.output = toString(tablename, constrainname, constraintstatement);
+
 	}
 	public String toString(String tablename, String constrainname, String constraintstatement){
 		String string = "Alter table " + tablename +" add constraint " + constrainname + " check("+constraintstatement+");";
 		return string;
 	}
-	
+
+	public String getOutput(){
+		return output;
+	}
+
+
 	public String getOperator(String operator){
 		if (operator.equals("NotBetween")){
 			operator = "not between";

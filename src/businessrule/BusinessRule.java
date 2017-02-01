@@ -27,39 +27,40 @@ public class BusinessRule {
 
 	//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.
 	public Object generateBusinessRule() {
+		Object GeneratedRuleObject = new Object();
 
 		//Attribute rules
 		if (type.equals("AttributeRangeRule")) {
-			new AttributeRangeRule(ruleid, authorid, type, operator, rangeAttribute, first, last);
+			GeneratedRuleObject = new AttributeRangeRule(ruleid, authorid, type, operator, rangeAttribute, first, last);
 		}
 		if (type.equals("AttributeCompareRule")) {
-			new AttributeCompareRule(ruleid, authorid, type, operator, first, last);
+			GeneratedRuleObject = new AttributeCompareRule(ruleid, authorid, type, operator, first, last);
 		}
 		if (type.equals("AttributeListRule")) {
-			new AttributeListRule(ruleid, authorid, type, operator, first, last);
+			GeneratedRuleObject = new AttributeListRule(ruleid, authorid, type, operator, first, last);
 		}
 		if (type.equals("AttributeOtherRule")) {
-			new AttributeOtherRule(ruleid, authorid, type, operator, rangeAttribute, first, last, range);
+			GeneratedRuleObject = new AttributeOtherRule(ruleid, authorid, type, operator, rangeAttribute, first, last, range);
 		}
 
 		//Tuple Rules
 		if (type.equals("TupleCompareRule")) {
-			new TupleCompareRule(ruleid, authorid, type, operator, first, last);
+			GeneratedRuleObject = new TupleCompareRule(ruleid, authorid, type, operator, first, last);
 		}
 		if (type.equals("TupleOtherRule")) {
-			new TupleOtherRule(ruleid, authorid, type, operator, first, last);
+			GeneratedRuleObject = new TupleOtherRule(ruleid, authorid, type, operator, first, last);
 		}
 
 		if (type.equals("EntityOtherRule")) {
-			new EntityOtherRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
+			GeneratedRuleObject = new EntityOtherRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
 		}
 		if (type.equals("InterEntityCompareRule")) {
-			new InterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode, beforeAfter);
+			GeneratedRuleObject = new InterEntityCompareRule(ruleid, authorid, type, operator, first, last, interEntityModifiable, errorCode, beforeAfter);
 		}
 		if (type.equals("ModifyRule")) {
-			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
+			GeneratedRuleObject = new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
 		}
-		return this;
+		return GeneratedRuleObject;
 	}
 
 	public String getBeforeAfter() {

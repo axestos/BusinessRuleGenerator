@@ -1,6 +1,7 @@
 package businessrule;
 
 public class AttributeCompareRule extends BusinessRule {
+	public String output;
 
 	public AttributeCompareRule(int ruleid, String authorid, String type, String operator, String first, String last){
 		super(ruleid, authorid, type, operator, first, last);
@@ -13,11 +14,15 @@ public class AttributeCompareRule extends BusinessRule {
 		String attribute = tableAttribute[1];
 		String constrainname = "constraint"+ruleid;
 		String constraintstatement = attribute+" "+getOperator(operator)+" "+last;
-		System.out.println(toString(tablename, constrainname, constraintstatement));
+		this.output = toString(tablename, constrainname, constraintstatement);
 	}
 	public String toString(String tablename, String constrainname, String constraintstatement){
 		String string = "Alter table " + tablename +" add constraint " + constrainname + " check("+constraintstatement+");";
 		return string;
+	}
+
+	public String getOutput(){
+		return output;
 	}
 	
 	public String getOperator(String operator){

@@ -2,6 +2,8 @@ package businessrule;
 
 
 public class InterEntityCompareRule extends BusinessRule {
+	public String output;
+
 
 	public InterEntityCompareRule(int ruleid, String authorid, String type, String operator, String first, String last, boolean interEntityModifiable, String errorCode, String beforeAfter) {
 		super(ruleid, authorid, type, operator, first, last);
