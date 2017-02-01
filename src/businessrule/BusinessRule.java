@@ -1,6 +1,6 @@
 package businessrule;
 
-public class BusinessRule implements BusinessRuleType {
+public class BusinessRule {
 	public int ruleid;
 	public String authorid;
 	public String type;
@@ -26,8 +26,7 @@ public class BusinessRule implements BusinessRuleType {
 	}
 
 	//Dit lijkt sterk op een Factory Pattern btw, not sure tho of dat het ook echt is.
-	@Override
-	public void generateBusinessRule() {
+	public Object generateBusinessRule() {
 
 		//Attribute rules
 		if (type.equals("AttributeRangeRule")) {
@@ -60,7 +59,7 @@ public class BusinessRule implements BusinessRuleType {
 		if (type.equals("ModifyRule")) {
 			new ModifyRule(ruleid, authorid, type, operator, first, last, errorCode, firstValue, beforeAfter);
 		}
-
+		return this;
 	}
 
 	public String getBeforeAfter() {

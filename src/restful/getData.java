@@ -79,8 +79,8 @@ public class getData {
                 if(!mJsonObject.get("beforeafter").equals("EMPTY")){
                     b.setBeforeAfter(mJsonObject.get("beforeafter").getAsString());
                 }
-                b.generateBusinessRule();
-                String SQLCode = b.getGeneratedCode();
+                Object Rule = b.generateBusinessRule();
+                String SQLCode = Rule.toString();
                 String authorID = b.getAuthorid();
                 writeData w = new writeData();
                 w.execWrite(authorID, SQLCode);
