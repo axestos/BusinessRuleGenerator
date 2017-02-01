@@ -56,18 +56,19 @@ public class getData {
             for (int i = 0; i < jArray.size() ; i++)
             {
                 mJsonObject = (JsonObject) jArray.get(i);
-                BusinessRule b = new BusinessRule(Integer.parseInt(mJsonObject.get("ruleid").toString()), mJsonObject.get("authorid").toString(), mJsonObject.get("type").toString(), mJsonObject.get("operator").toString(), mJsonObject.get("firstvalue").toString(), mJsonObject.get("lastvalue").toString() );
+                System.out.println(mJsonObject.get("type").toString());
+                BusinessRule b = new BusinessRule(Integer.parseInt(mJsonObject.get("ruleid").getAsString()), mJsonObject.get("authorid").getAsString(), mJsonObject.get("type").getAsString(), mJsonObject.get("operator").getAsString(), mJsonObject.get("firstvalue").getAsString(), mJsonObject.get("lastvalue").getAsString() );
                 if(!mJsonObject.get("errorcode").equals("EMPTY")){
-                    b.setErrorCode(mJsonObject.get("errorcode").toString());
+                    b.setErrorCode(mJsonObject.get("errorcode").getAsString());
                 }
                 if(!mJsonObject.get("rangeattribute").equals("EMPTY")){
-                    b.setRangeAttribute(mJsonObject.get("rangeattribute").toString());
+                    b.setRangeAttribute(mJsonObject.get("rangeattribute").getAsString());
                 }
                 if(!mJsonObject.get("range").equals("EMPTY")){
-                    b.setRange(mJsonObject.get("range").toString());
+                    b.setRange(mJsonObject.get("range").getAsString());
                 }
                 if(!mJsonObject.get("firstvarvalue").equals("EMPTY")){
-                    b.setFirstValue(mJsonObject.get("firstvarvalue").toString());
+                    b.setFirstValue(mJsonObject.get("firstvarvalue").getAsString());
                 }
                 if(!mJsonObject.get("changeableinterent").equals(0)){
                     int booleanInt = Integer.parseInt(String.valueOf(mJsonObject.get("changeableinterent")));
@@ -76,11 +77,10 @@ public class getData {
                     }
                 }
                 if(!mJsonObject.get("beforeafter").equals("EMPTY")){
-                    b.setBeforeAfter(mJsonObject.get("beforeafter").toString());
+                    b.setBeforeAfter(mJsonObject.get("beforeafter").getAsString());
                 }
                 b.generateBusinessRule();
                 String SQLCode = b.getGeneratedCode();
-                System.out.println(SQLCode);
                 String authorID = b.getAuthorid();
                 writeData w = new writeData();
                 w.execWrite(authorID, SQLCode);

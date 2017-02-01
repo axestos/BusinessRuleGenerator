@@ -7,13 +7,13 @@ public class BusinessRule implements BusinessRuleType {
 	public String operator;
 	public String first;
 	public String last;
-	private boolean interEntityModifiable = false;
-	private String errorCode;
-	private String generatedCode;
-	private String beforeAfter;
-	private String rangeAttribute;
+	public boolean interEntityModifiable = false;
+	public String errorCode;
+	public String generatedCode;
+	public String beforeAfter;
+	public String rangeAttribute;
 	public String firstValue;
-	private String range;
+	public String range;
 	
 	public BusinessRule(int ruleid, String authorid, String type, String operator, String first, String last) {
 		super();
