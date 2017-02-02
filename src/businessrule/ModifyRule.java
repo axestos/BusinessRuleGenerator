@@ -21,7 +21,7 @@ public class ModifyRule extends BusinessRule {
 		String tablename_attr1 = first.split("\\.")[0];
 		String tablename_attr2 = last.split("\\.")[0];
 		String cursorID_table1 = "cursor"+tablename_attr2+ruleid;
-		String triggernameTable1 = tablename_attr1+type+ruleid;
+		String triggernameTable1 = type+ruleid;
 		this.output = toString(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, tablename_attr1, errorCode, beforeAfter, attrTable1_value);
 	}
 
@@ -32,7 +32,7 @@ public class ModifyRule extends BusinessRule {
 
 	private String toString(String triggername, String attrTable1, String cursorID_table1, String tablename_attr2, String tablename_attr1, String errorCode, String beforeAfter, String attrTable1_value) {
 		String generatedDeclare = "Create or replace trigger "+triggername+
-				"\n"+beforeAfter+" insert or update or delete on "+tablename_attr1+
+				"\n"+beforeAfter+" insert or update or delete on tosad_2016_2d_team5_target."+tablename_attr1+
 				"\nfor each row"+
 				"\nDECLARE \n"+
 				"l_passed boolean := true;\n"+
@@ -46,7 +46,8 @@ public class ModifyRule extends BusinessRule {
 				"open "+cursorID_table1+";\n"+
 				"fetch "+cursorID_table1+" into l_"+attrTable1+";\n"+
 				"close "+cursorID_table1+";\n"+
-				"l_passed := "+attrTable1+" "+getOperator(operator)+" "+attrTable1_value+"\n"+
+				"l_passed := "+attrTable1+" "+getOperator(operator)+" "+attrTable1_value+";\n"+
+				"end if;"+
 				"if not l_passed then\n"+
 				"raise_application_error (-20800,'"+errorCode+"');\n"+
 				"end if;\n"+

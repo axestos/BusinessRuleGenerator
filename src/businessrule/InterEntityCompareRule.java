@@ -21,8 +21,8 @@ public class InterEntityCompareRule extends BusinessRule {
         String tablename_attr1 = first.split("\\.")[0];
         String cursorID_table2 = "cursor" + tablename_attr1 + ruleid;
         String remoteID_attr1 = "l_" + tablename_attr1;
-        String triggernameTable1 = tablename_attr1 + type + ruleid;
-        String triggernameTable2 = tablename_attr2 + type + ruleid;
+        String triggernameTable1 = type + ruleid + "_1";
+        String triggernameTable2 = type + ruleid + "_2";
         System.out.println(toStringTableOne(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, remoteID_attr2, tablename_attr1, remoteID_attr1, errorCode, beforeAfter));
         this.output = (toStringTableOne(triggernameTable1, attrTable1, cursorID_table1, tablename_attr2, remoteID_attr2, tablename_attr1, remoteID_attr1, errorCode, beforeAfter));
         if (interEntityModifiable == true) {
@@ -40,7 +40,7 @@ public class InterEntityCompareRule extends BusinessRule {
 
     public String toStringTableOne(String triggername, String attrTable1, String cursorID_table1, String tablename_attr2, String remoteID_attr2, String tablename_attr1, String remoteID_attr1, String errorCode, String beforeAfter) {
         String generatedDeclare = "Create or replace trigger " + triggername +
-                "\n" + beforeAfter + " insert or update on " + tablename_attr1 +
+                "\n" + beforeAfter + " insert or update on tosad_2016_2d_team5_target." + tablename_attr1 +
                 "\nfor each row" +
                 "\nDECLARE \n" +
                 "l_passed boolean := true;\n" +

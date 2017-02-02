@@ -13,12 +13,12 @@ public class EntityOtherRule extends BusinessRule {
 	private void generateOtherRule(int ruleid, String first, String errorCode, String beforeAfter){
 		String attrTable1 = first.split("\\.")[1];
 		String tablename_attr1 = first.split("\\.")[0];
-		String triggernameTable1 = tablename_attr1+type+ruleid;
+		String triggernameTable1 = type+ruleid;
 		this.output = toString(triggernameTable1, attrTable1, tablename_attr1, errorCode, beforeAfter);
 	}
 
 	private String toString(String triggername, String attrTable1, String tablename_attr1, String errorCode, String beforeAfter) {
-		String generatedDeclare = "Create or replace trigger "+triggername+
+		String generatedDeclare = "Create or replace trigger tosad_2016_2d_team5_target."+triggername+
 				"\n"+beforeAfter+" insert or update on "+tablename_attr1+
 				"\nfor each row"+
 				"\nDECLARE \n"+
@@ -28,7 +28,7 @@ public class EntityOtherRule extends BusinessRule {
 				"SELECT count(*) into l_aantal\n"+
 				"from "+tablename_attr1+
 				"\nwhere "+tablename_attr1+"_"+attrTable1+" = p_"+tablename_attr1+"_row.new_"+tablename_attr1+"_id;\n"+
-				"l_passed := "+attrTable1+" "+getOperator(operator)+" "+firstValue+"\n"+
+				"l_passed := "+attrTable1+" "+getOperator(operator)+" "+firstValue+";\n"+
 				"if not l_passed then\n"+
 				"raise_application_error (-20800,'"+errorCode+"');\n"+
 				"end if;\n"+

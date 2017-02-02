@@ -21,7 +21,7 @@ public class TupleCompareRule extends BusinessRule {
 		System.out.println(toString(tablename, constrainname, constraintstatement));
 	}
 	public String toString(String tablename, String constrainname, String constraintstatement){
-		String string = "Alter table " + tablename +" add constraint " + constrainname + " check("+constraintstatement+");";
+		String string = "Alter table tosad_2016_2d_team5_target." + tablename +" add constraint " + constrainname + " check("+constraintstatement+");";
 		return string;
 	}
 
