@@ -16,12 +16,12 @@ import org.apache.http.impl.client.HttpClients;
  */
 public class writeData {
 
-    public void execWrite(String author, String msg)  throws ClientProtocolException, IOException{
+    public void execWrite(Integer RuleID, String msg)  throws ClientProtocolException, IOException{
             CloseableHttpClient client = HttpClients.createDefault();
             HttpPost httpPost = new HttpPost("https://ondora02.hu.nl:8080/ords/tosad_2016_2d_team5/118146/BusinessRules");
 
             JsonObject record = new JsonObject();
-            record.addProperty("author", author);
+            record.addProperty("ruleid", RuleID);
             record.addProperty("generatedcode", msg);
             System.out.println(record.toString());
             StringEntity entity = new StringEntity(record.toString());

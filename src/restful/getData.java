@@ -56,7 +56,6 @@ public class getData {
             for (int i = 0; i < jArray.size() ; i++)
             {
                 mJsonObject = (JsonObject) jArray.get(i);
-                System.out.println(mJsonObject.get("type").toString());
                 BusinessRule b = new BusinessRule(Integer.parseInt(mJsonObject.get("ruleid").getAsString()), mJsonObject.get("authorid").getAsString(), mJsonObject.get("type").getAsString(), mJsonObject.get("operator").getAsString(), mJsonObject.get("firstvalue").getAsString(), mJsonObject.get("lastvalue").getAsString() );
                 if(!mJsonObject.get("errorcode").equals("EMPTY")){
                     b.setErrorCode(mJsonObject.get("errorcode").getAsString());
@@ -80,10 +79,11 @@ public class getData {
                     b.setBeforeAfter(mJsonObject.get("beforeafter").getAsString());
                 }
                 BusinessRule Rule = (BusinessRule) b.generateBusinessRule();
+                System.out.println("GENERATED CODE: "+ Rule.getOutput());
                 String SQLCode = Rule.getOutput();
-                String authorID = b.getAuthorid();
+                Integer RuleID = b.getRuleid();
                 writeData w = new writeData();
-                w.execWrite(authorID, SQLCode);
+                w.execWrite(RuleID, SQLCode);
             }
 
 
